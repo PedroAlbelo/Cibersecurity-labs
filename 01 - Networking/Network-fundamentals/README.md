@@ -95,10 +95,9 @@ The logic behind IoT revolves around connected devices capable of sending, recei
 
 In short, sensor-equipped devices can store information and collect data to generate responses tailored to the user's profile; this type of real-time communication has optimized the modern world, enabling faster and more efficient interaction between users and technology.
 
-## Cybersecurity Perspective
+### Cybersecurity Perspective
 
 Studying network types is essential for cybersecurity, given that any connected object is potentially vulnerable to cyberattacks.
-
 Following this line of reasoning, the assets within the computers of companies, organizations, and similar entities that require protection include:
 
 Servers,
@@ -117,7 +116,7 @@ Firewall configuration.
 
 based on this analysis, the larger and more complex a network becomes, the more critical its organization and access control measures must be.
 
-## summary of what I learned in this module:
+### summary of what I learned in Network Types:
 
 - A network is a collection of interconnected devices.
 
@@ -130,3 +129,46 @@ based on this analysis, the larger and more complex a network becomes, the more 
 - Smartphones, IoT devices, vehicles and sensors can all participate in networks.
 
 - Every connected device can increase the cyberattack that cybersecurity professionals need to protect.
+
+## 2. Data Transmission
+
+### What is data transmission?
+
+Basically, it's the act of moving data from one point to another using signals following communication rules, such as from cellphones to the router or from one server to another.
+Messages arrive because these signals have been routed and reassembled using synchronization and error detection to prevent errors, and in a near-instantaneous way. Within this framework, computer processes utilize "binary data", which is the optimal digital format for enabling this near-instantaneous network communication. Simply put, this information is represented by "bits".
+
+### Bits & Bytes
+
+A bit, short for "binary digit," is the smallest unit of digital information and can only have two possible values: 0 and 1.
+Furthermore, a group of 8 bits forms one byte, such as:
+
+(8 bits = 1 byte)
+
+### How Data Travels Through a Network?
+
+Despite the bits, for information to travel from one point to another, it needs physical signals, for example, electrical signals, optical signals, and wireless signals. Discussing each one:
+
+- Electrical Signals:
+Copper cables can transmit data; the electrical pulses represent digital information traveling through network devices.
+
+- Optical Signals:
+Using fiber optics, they transmit information using light pulses and are generally used for high bandwidth and long-distance communication.
+
+- Wireless Signals:
+They transmit energy using electromagnetic waves instead of physical cables, such as: Wi-Fi, cellular networks, and radio communication. Even though the same digital data is transmitted, it is necessary to understand the different ways this information is transported in order to more objectively comprehend the function of networks.
+
+### Summary of what I learned in Data Transmission:
+
+Data transmission in cybersecurity is a topic that needs to be noted by professionals in the field because network attacks and defenses involve the analysis of data during transmission.
+
+For example: what network medium is being used, how network traffic can be captured and analyzed and subsequently protected, and the need for encryption when sending sensitive information.
+
+A brief, bulleted summary of the points I felt were worth highlighting:
+
+- Computers represent digital information using bits.
+
+- Text, images, audio, and more can all be represented digitally/binary.
+
+- Binary data are converted into signals to travel through a network.
+
+- Understanding how data is transmitted provides a foundation for analyzing network traffic in cybersecurity.
