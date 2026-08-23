@@ -172,3 +172,73 @@ A brief, bulleted summary of the points I felt were worth highlighting:
 - Binary data are converted into signals to travel through a network.
 
 - Understanding how data is transmitted provides a foundation for analyzing network traffic in cybersecurity.
+
+## 3. Bandwidth & Throughput
+
+### Bandwidth
+
+Bandwidth theoretically represents the capacity of a network medium to transport data during a given period of time.
+
+It is exemplified in bits per second, as shown in the table below:
+
+| Unit | Equivalent |
+|------|------------|
+| Kbps | 1,000 bps |
+| Mbps | 1,000,000 bps |
+| Gbps | 1,000,000,000 bps |
+
+For example, a network connection (500 Mbps) has a capacity of up to 500 million bits per second theoretically. However, this does not mean that the connection will be transferred at that rate.
+
+### Throughput
+
+throughput is the amount of data that is actually transferred through a network during a given period of time, so in summary:
+
+Bandwidth is like the theoretical capacity, while the transfer rate is the actual transfer rate of the network. Furthermore, there are factors that can influence the availability of bandwidth, such as: Network congestion, traffic volume, transmission medium, network equipment, latency, bottlenecks along the network path.
+
+### Latency
+Represents the delay that data takes to travel from one point to another on a network and is measured in milliseconds (ms). Lower latency generally means that communication between devices takes less time to reach each other.
+
+### Hands-on Example
+In an objective and practical way, we can observe the latency of a network using the 'ping' command in Linux, for example:
+
+
+![Ping Latency Test](images/ping.png)
+(command used: ping 8.8.8.8)
+
+information presented:
+8.8.8.8 - Google Public DNS server
+ping - Tests network connectivity and latency
+ICMP - Protocol used by ping to send/receive packets
+ttl - Time To Live; limits how many hops a packet can make
+time - Round-trip time for each packet, in milliseconds
+packet loss - Percentage of packets that failed to return
+rtt min - Minimum round-trip latency
+rtt avg - Average round-trip latency
+rtt max - Maximum round-trip latency
+mdev - Variation (deviation) in round-trip latency
+^C - Stops the ping command
+6 packets transmitted - Number of packets sent
+6 received - Number of packets successfully received
+0% packet loss - No packets were lost
+37.824 ms avg - Average latency to 8.8.8.8
+
+Note: Ping measures latency and packet loss. It does not directly measure bandwidth or throughput. This experiment is included because latency is one of the factors that can influence network performance.
+
+### Summary of what I learned studying Bandwidth and Throughput
+
+Understanding bandwidth and throughput helps security professionals investigate anomalies in network performance, perceive unexpected changes in network traffic, and observe that sometimes performance problems may be associated with network congestion, scanning, malware communication, or DDoS activity.
+These metrics do not necessarily indicate an attack, but they can provide useful information during network analysis. 
+
+Topics that I learned in this module:
+
+- Bandwidth represents the theoretical capacity of the network connection.
+
+- Throughput represents the actual rate of data transferred.
+
+- Throughput can be affected by congestion, latency, and other factors.
+
+- Latency represents the delay in communication between two points.
+
+- The Ping command is useful for observing latency and packet loss.
+
+- Network Performance metrics can provide useful information during cybersecurity analyses.
