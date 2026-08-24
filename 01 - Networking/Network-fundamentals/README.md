@@ -242,3 +242,90 @@ Topics that I learned in this module:
 - The Ping command is useful for observing latency and packet loss.
 
 - Network Performance metrics can provide useful information during cybersecurity analyses.
+
+### Clients and Servers
+
+Devices that participate directly in network communication are typically called hosts. Essentially, hosts possess an IP address and provide data, services, or resources to other systems. In short, they are devices that receive, store, or share data on a given network. A host can send and receive data across a network, allowing it to operate as a client, a server, or both.
+
+Note: The physical computer itself does not necessarily determine this configuration; rather, the software and services running on it determine whether it acts as a client or a server.
+
+### Client
+
+To better understand the concepts mentioned, it is important to define what a client is. A client is simply a host that requests information, resources, or services from another device.
+
+More specifically, a client typically runs software designed to communicate with a specific type of server. For example: when I open a website, my computer acts as a client. In a simple diagram, it looks like this:
+
+Client -> request ->  Server
+
+But viewed literally, it looks like this:
+Computer -> HTTP/HTTPS request -> Web Server -> Data -> Computer
+
+### Server
+
+A server, on the other hand, is a host that provides information, resources, or services. Servers run specialized software depending on the service they provide. Here is a brief overview of server types and their functions:
+
+Web Server -> Provides websites and web resources
+Email Server -> Sends, receives, and stores email
+File Server -> Stores and provides access to files
+
+Note: It is important to remember that a server's function is to respond to requests from one or multiple clients simultaneously. Servers are generally used in larger networks to manage resources and services centrally.
+
+### Client-Server Communication
+
+To better understand this communication, it is important to note that the model operates via requests and responses. Simply put, the client makes a request to a server, the server processes that request and sends a response back to the client. A common example is accessing a website. To break this idea down: the web browser acts as the client, while the computer hosting the website acts as the server.
+
+### Servers and Multiple Services
+
+In short, a single physical computer does not have to perform just one server function. It can run multiple types of server software at the same time. Such as a web server, email server, or file server. This allows a single machine to provide the functions associated with all these types of software.
+
+This model is quite common in small businesses or lab environments. However, larger environments tend to split this configuration across multiple servers dedicated to specific functions to optimize performance, security, and other factors.
+
+### Clients and Multiple Services
+
+Following the same logic as the previous topic, a host can also run multiple client applications at the same time. Such as browsing a website, checking email, downloading files, using instant messaging, and so on. The diagram for this would look like this:
+
+Computer -> Web Browser -> Web Server
+|
+-> Email client -> Email server
+|
+-> File client -> File server
+
+In this way, each application communicates with the server responsible for its specific function.
+
+### Peer-to-Peer Networks
+
+- What is a P2P network?
+
+A peer-to-peer network, also known as P2P, is a network where devices act as both clients and servers. Instead of dedicated servers providing all resources, the devices share resources directly with one another. For example:
+
+Computer A <--> Computer B
+
+Here, both Computer A and Computer B act as both client and server, meaning they can both request and provide resources. A practical example would be Computer A sharing files and using Computer B's printer, while Computer B shares its printer and accesses files on Computer A.
+In short, the simplest P2P network can consist of just two computers connected directly to each other via a wired or wireless connection to exchange information. 
+
+- Common Uses of P2P Networks
+
+P2P networks serve to facilitate the simple sharing of resources—such as files, printers, and inter-computer communication—and are suitable for small home or office networks.
+
+- Advantages of P2P Networks
+
+They are particularly advantageous in small environments because they are easy to set up, requiring fewer configuration steps than traditional client-server networks.
+They are less expensive and do not require a dedicated server, thereby reducing the amount of hardware needed.
+Its simplicity is further highlighted by a relatively straightforward network architecture, making it a suitable choice for small environments.
+
+- Disadvantages of P2P networks:
+
+It is important for companies to consider the disadvantages to better understand which network type best suits their profile. The specific limitations of this type of network include:
+Lack of centralized administration; that is, there is no central server to control users, permissions, resources, and so on.
+Each device may need to be configured individually.
+Security tends to be lower, as resources distributed across multiple computers are more difficult to manage securely.
+
+- Client-server or P2P?
+
+For my studies, I find it necessary to highlight which network model is ideal for specific companies. A client-server model typically features a dedicated server, centralized administration, better scalability, and easier security implementation, though it comes at a higher cost. Conversely, a P2P network lacks centralized administration and dedicated servers, and has limited scalability, but the initial cost tends to be lower.
+
+Analyzing these points is important because companies and organizations usually opt for a client-server model, whereas a P2P setup is often more convenient for small home networks.
+
+### Larger P2P Networks
+
+Building on the previous concept, this scenario arises when multiple devices need to communicate within the same local network. An intermediary device such as a switch may be used. For instance, if there are computers A, B, C, and D, the switch acts as a central hub. However, even though the switch connects the devices, the computers themselves can still share resources directly with one another, eliminating the need for a dedicated central server.
