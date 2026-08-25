@@ -353,3 +353,75 @@ Key concepts covered include:
 - Servers can provide services to multiple clients, and a single computer can run multiple server services.
 
 - P2P networks allow devices to act as both clients and servers.Furthermore, they are easy to set up and low-cost, though they have limitations regarding security and scalability.
+
+## 5. Network Components
+
+- What are they?
+
+To understand network components, we must first understand network infrastructure. Simply put, this is the structure that enables communication between devices. A network can be as simple as two computers connected by a cable, or it can be vast, comprising thousands of devices distributed across multiple cities or countries.
+
+Regardless of size, a network is generally divided into End Devices, Intermediary Devices, and Network Media, with each playing a distinct role in network communication.
+
+### End Device
+
+An End Device represents the starting or ending point of network communication; in short, data typically originates at one end device and eventually reaches another. Common examples include desktops, laptops, and wireless tablets.
+
+For example: Laptop -> Send data -> Network -> Server
+
+In this scenario, both the laptop and the server are end devices, while routers and switches act as intermediaries to facilitate data transport.
+
+- Source and Destination
+
+We can understand that every communication involves at least a source and a destination. The Source is the device that creates or sends data, while the Destination is the device that receives it. For example:
+
+Source -> (message) -> Network -> Destination
+
+- Host Address
+
+It is important to note that a network must be able to distinguish one host from another; therefore, devices use addresses. When a host sends data, it must identify the intended recipient.
+
+Without addressing, network devices would not know where to deliver the information.
+
+### Intermediary Devices
+
+These devices help manage the flow of data across the network. They perform functions such as forwarding data, selecting paths, connecting different networks, connecting devices within a LAN, filtering network traffic, providing wireless connectivity, and enhancing network security. These generally include routers, switches, firewalls, and multilayer switches.
+
+- Switch
+
+A switch's function is to connect devices within the same local network (unlike a router, which communicates with external networks), thereby allowing devices within the network to communicate with one another.
+
+- Router
+
+A router, on the other hand, serves to connect different networks. A common example is a home router: a laptop connects to the home router,gaining internet access, which in turn provides access to a web server.
+Simply put, the router enables the local network to communicate with external networks.
+
+### Firewall
+
+A firewall helps control network traffic based on a set of security rules; it inspects traffic and decides whether to allow or block communication. This helps protect the internal network, whether for a company, organization, or home, against unwanted or unauthorized traffic.
+
+### Network Media
+Without network media, devices lack a communication channel between them; this concept exists to enable signal transport. Thus, the physical or wireless channel used to carry network communication is called network media.
+Example:
+Computer -> (Network media) -> Switch
+
+Note: Network media includes copper cables, fiber-optic cables, wireless connections, Wi-Fi, and WAN connections.
+
+### Summary of Network Components
+
+A brief recap of what was previously discussed:
+
+- Network infrastructure is the backbone of network communication.
+
+- Network infrastructure is divided into end devices, intermediary devices, and network media.
+
+- End devices, also known as hosts, are the source or destination of network messages. 
+
+- Intermediate networks help control network traffic.
+
+- Routers, switches, and firewalls are intermediate devices.
+
+- Switches connect devices within a local network.
+
+- A router connects different networks and helps determine where traffic should go.
+
+- A firewall filters network traffic based on security rules.
