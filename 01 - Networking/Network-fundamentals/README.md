@@ -243,7 +243,7 @@ Topics that I learned in this module:
 
 - Network Performance metrics can provide useful information during cybersecurity analyses.
 
-### Clients and Servers
+### Clients & Servers
 
 Devices that participate directly in network communication are typically called hosts. Essentially, hosts possess an IP address and provide data, services, or resources to other systems. In short, they are devices that receive, store, or share data on a given network. A host can send and receive data across a network, allowing it to operate as a client, a server, or both.
 
@@ -329,3 +329,27 @@ Analyzing these points is important because companies and organizations usually 
 ### Larger P2P Networks
 
 Building on the previous concept, this scenario arises when multiple devices need to communicate within the same local network. An intermediary device such as a switch may be used. For instance, if there are computers A, B, C, and D, the switch acts as a central hub. However, even though the switch connects the devices, the computers themselves can still share resources directly with one another, eliminating the need for a dedicated central server.
+
+### P2P Application Architecture
+
+Fundamentally, a P2P application typically consists of a user interface and a background service; the interface allows the user to interact with the application, while the background service manages communication and resource sharing with other peers.
+
+### Hybrid P2P Systems
+
+Earlier studies established that P2P is a decentralized system; however, not every P2P system is fully decentralized, as some applications employ a hybrid architecture. In this system, resources remain distributed among peers, but a centralized server maintains an index indicating where those resources are located.
+
+### Summary of P2P & Client-Server Concepts
+
+Key concepts covered include:
+
+- A device that participates directly in network communication is called a Host.
+
+- Hosts can act as clients, servers, or both.
+
+- Client = requests resources.
+
+- Server = provides resources/services.
+
+- Servers can provide services to multiple clients, and a single computer can run multiple server services.
+
+- P2P networks allow devices to act as both clients and servers.Furthermore, they are easy to set up and low-cost, though they have limitations regarding security and scalability.
