@@ -243,7 +243,7 @@ Topics that I learned in this module:
 
 - Network Performance metrics can provide useful information during cybersecurity analyses.
 
-### Clients & Servers
+## 4. Clients & Servers
 
 Devices that participate directly in network communication are typically called hosts. Essentially, hosts possess an IP address and provide data, services, or resources to other systems. In short, they are devices that receive, store, or share data on a given network. A host can send and receive data across a network, allowing it to operate as a client, a server, or both.
 
