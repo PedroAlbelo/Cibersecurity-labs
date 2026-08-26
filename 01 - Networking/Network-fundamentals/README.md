@@ -503,3 +503,104 @@ To briefly summarize the points covered:
 - The available connection depends heavily on geographic location and the provider's infrastructure.
 
 - Satellite internet is useful in remote areas lacking cable or cellular coverage.
+
+## 7. Wireless Network
+
+In general, wireless networks allow devices to communicate without the need for a physical cable between them, as the name implies. However, unlike other forms of transmission, wireless networks use electromagnetic waves to carry information through the air.
+The most common types today include cellular networks, Wi-Fi, Bluetooth, NFC, and GPS, while specific wireless technologies include 3G, 4G, LTE, and 5G. Each has a specific purpose, range, architecture, and communication method.
+
+### Radio Waves
+
+As previously mentioned, wireless communication uses radio waves. Instead of sending electrical signals via cable, information is encoded into electromagnetic signals and transmitted through the air. The receiving device then detects the signal and converts it back into usable data.
+
+### Cellular Network
+
+In short, this is a wireless communication system designed to provide connectivity over large geographic areas. Instead of connecting directly to another smartphone, the device typically communicates with nearby cellular infrastructure, such as a cell tower.
+
+This way, as a mobile phone moves between areas, the network can hand off the connection to another cell station, ensuring the user maintains connectivity while on the move.
+
+### Cellular Generations
+
+When discussing mobile phones, the evolution of the technology over the years is notable, moving from 2G to 3G, 4G, and 5G. Each generation has introduced improvements in network capacity, data transmission speed, latency, and other areas.
+
+- 3G
+
+Represents the third generation of mobile communication technology; it provided an early improvement in data connectivity, supporting web browsing, email, and more.
+
+- 4G
+
+Compared to 3G, it brought a significant increase in data speeds, enabling many smartphones to handle bandwidth-intensive internet applications.
+
+- 5G
+
+Represents the current generation of cellular network technology; its design focuses not only on higher data speeds but also on greater network capacity, support for a larger number of devices, and lower latency.
+
+### GSM
+
+GSM stands for Global System for Mobile Communications. It became one of the primary standards for mobile telephony; while originally designed mainly for mobile voice communication, later generations of cellular technology introduced enhanced support for data transmission.
+
+### Wi-Fi
+
+To put it simply, this is a wireless networking technology commonly used to connect devices within a local area network (LAN).
+
+- Public Wi-Fi
+
+It allows users to connect in public spaces such as airports, hotels, cafes, and shopping malls. However, since the network is shared with other users, security must be considered, for instance, by using encrypted protocols such as:
+
+HTTPS
+SSH
+VPN
+
+Note: Using these methods allows the user to browse the network while protecting their information.
+
+### Bluetooth
+
+To be concise, this is a wireless technology designed for short-range communication. It is generally used to connect personal devices such as wireless headphones, speakers, smartwatches, and more.
+
+Unlike Wi-Fi, Bluetooth does not provide general network access to multiple devices. However, it can support connections to several devices simultaneously, such as a laptop connecting to a Bluetooth mouse, keyboard, and headphones.
+
+### GPS
+
+GPS stands for Global Positioning System. As the name implies, it is used to determine the geographic location of a specific object or the user. As expected, GPS is a device that receives signals transmitted by satellites.
+
+However, a GPS unit does not provide an internet connection. Although they often work together, they serve different functions, for instance, a GPS can determine location but cannot download maps or traffic information.
+
+### NFC
+
+The acronym stands for Near Field Communication. As the name implies, it is a communication technology used for very short ranges, spanning just a few centimeters, such as in access cards, transit cards, and identification systems.
+
+### Signal Strength
+
+In this context, it is important to understand that wireless communication depends on the quality of the received signal. As a device moves away from the transmitter, the signal may weaken, physical obstacles can also affect wireless signals.
+
+- Wireless Interference
+
+Regarding signal strength, it is also worth noting that when wireless devices share the electromagnetic spectrum with many other devices, they may experience interference with one another.
+
+### Wireless Security
+
+Since communication does not require a cable, it can always be detected by devices within range. Therefore, to prevent unauthorized access, it is important to implement the following security mechanisms:
+
+Authentication
+Encryption
+Strong passwords
+
+Note: Consequently, a wireless network should never rely solely on the physical proximity of users as a security measure.
+
+### Wireless Networks Summary
+
+A brief, objective overview of the topics covered:
+
+- Wireless networks transmit information without the need for physical cables, as the name implies.
+
+- Cellular networks provide connectivity over large geographical areas.
+
+- Wi-Fi typically provides wireless connectivity to a local area network (LAN).
+
+- A hotspot is an area where Wi-Fi connectivity is available.
+
+- Bluetooth is designed for short-range communication between devices.
+
+- NFC is a form of extremely short-range connectivity used primarily for contactless payments.
+
+- Wireless networks always require adequate security because their signals are accessible to anyone nearby.
