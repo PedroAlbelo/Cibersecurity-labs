@@ -587,6 +587,12 @@ Strong passwords
 
 Note: Consequently, a wireless network should never rely solely on the physical proximity of users as a security measure.
 
+- WPA2
+
+This acronym stands for Wi-Fi Protected Access 2, it is a security standard designed to protect wireless networks. Its primary goal is to help prevent unauthorized access and protect transmitted data.
+
+in general, WPA2 helps reduce the risk of intrusions by utilizing the authentication and encryption methods mentioned above.
+
 ### Wireless Networks Summary
 
 A brief, objective overview of the topics covered:
