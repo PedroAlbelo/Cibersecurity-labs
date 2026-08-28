@@ -699,6 +699,7 @@ Regarding the network name, it is worth noting that using the device model or br
 These are necessary for devices to communicate successfully on a network. This success is only possible if they follow a common set of rules (protocols).
 
 - Why?
+
 These protocols define how communication between devices must occur so that information sent by one host is received and understood by another.
 
 To illustrate how this works: two people speaking via walkie-talkies must agree on common points, such as who is sending the message and who is receiving it, as well as when and how the message is delivered.
@@ -760,3 +761,35 @@ Presented concisely and divided into sections:
 - Encapsulation adds source and destination addressing so that data can travel meaningfully.
 
 - message patterns serve to define how devices exchange messages with each other.
+
+### Communication Standards
+
+Nowadays, even with modern devices from different manufacturers and with varying operating systems and hardware architectures, they are still able to communicate with one another, thanks to communication standards.
+
+- How does this work?
+
+Standards define a common set of rules, but they differ from what we saw previously in protocols. While protocols define the rules used during communication, communication standards ensure that these rules are implemented consistently across different devices and technologies.
+
+- How do networks follow these standards and protocols?
+
+From a device's perspective, it understands its own information exactly when it is connected to the network, thus knowing its MAC address, IPv4, IPv6 (which I will delve into in later sections), its default gateway, and its DNS server.
+
+The host then uses this information, along with network protocols, to determine how communication will take place.
+
+### Summary of communication standards
+
+Broken down into sections:
+
+- Standards ensure that network technologies are implemented consistently.
+
+- Standards allow devices from different manufacturers to communicate.
+
+- A host operates using its own addressing and network configuration information.
+
+- A default gateway is used for traffic that needs to reach another network.
+
+- DNS allows a host to obtain an IP address.
+
+- IPv4 and IPv6 provide network addressing and communication.
+
+- RFC stands for "Request for Comments". These documents record the development and specification of Internet technologies and standards.
