@@ -610,3 +610,86 @@ A brief, objective overview of the topics covered:
 - NFC is a form of extremely short-range connectivity used primarily for contactless payments.
 
 - Wireless networks always require adequate security because their signals are accessible to anyone nearby.
+
+## Building a Home Network
+
+For any cybersecurity student or professional, it is essential to understand and know how to configure an integrated wireless router and a wireless client to establish a secure internet connection.
+
+In this section, I will cover this conceptually and theoretically. However, in the `home-router-configuration` folder, I demonstrate the step-by-step process of actually configuring a home network in a pratical way.
+To achieve this goal, it is fundamental to be able to describe the components needed to create a home network, describe wired and wireless network technologies (including Wi-Fi), and configure wireless devices for secure communication.
+
+### Typical Home Network Routers
+
+In general, home or small business routers feature two main types of ports: Ethernet ports and an Internet port.
+
+- Ethernet Ports
+
+These connect to the internal switch within the router, all devices connected to the switch ports reside on the same local network.
+
+- Internet Port
+
+This port is typically used to connect the device to another network and it is commonly used to connect a DSL or cable modem for internet access.
+
+- LAN Frequencies
+
+Briefly, wireless technologies used in homes generally operate on the 2.4 GHz and 5.0 GHz frequencies. Understanding these details is important for knowing more about network speed, range, and stability.
+
+- 2.4 GHz
+Longer waves penetrate walls and objects easily, but the transfer rate is lower, and there is high interference from sources such as microwaves, Bluetooth, and other networks.
+
+- 5.0 GHz
+Transmits more data per second and experiences less interference, but has a shorter range.
+
+### Wired Network Technologies
+
+- Category 5e Cable
+
+The most common type of cabling used in a LAN. The cable consists of 4 pairs of wires twisted together to reduce electrical interference.
+
+![Category5eCable](images/Category5eCable.jpg)
+
+- Coaxial Cable
+
+Features a tubular insulating layer surrounded by a tubular conductive shield.
+
+![CoaxialCable](images/coaxialCable.jpg)
+
+- Fiber-optic Cable
+
+Can be made of glass or plastic and can carry information at high speeds over long distances, allowing for the transmission of large amounts of data.
+
+![Fiber-OpticCable](images/Fiber-opticCable.jpg)
+
+### Wireless network settings
+
+Delving into the technical details, the basic wireless configuration interface for a wireless router typically utilizes 802.11 standards/protocols. It includes several settings that need to be adjusted: Network Mode, Network Name (SSID), Standard Channel, and SSID Broadcast.
+
+- Network Mode:
+
+Determines the type of technology to be supported (e.g., 802.11b, 802.11g, 802.11n).
+
+In this context, the 802.11 protocol can provide better transfer rates. If all devices connect using the same standard, they can achieve the maximum speeds associated with that standard.
+
+- Network Name (SSID):
+
+Used to identify the WLAN. It is important to note that all devices wishing to join the WLAN must use the same SSID.
+
+(Note: SSID stands for Service Set Identifier.)
+
+- Standard Channel:
+
+Specifies the channel on which communication will take place. By default, it is set to "Auto" to allow the access point to determine the best channel to use.
+
+- SSID Broadcast:
+
+Determines whether the SSID is broadcast to all devices within range. By default, this is enabled.
+
+![SSID](images/GUIrouterWireless.png)
+
+- DHCP
+
+Also known as Dynamic Host Configuration Protocol, this is a network protocol that automatically assigns IP addresses, thereby eliminating the need for manual IP configuration.
+
+- Design Considerations
+
+Regarding the network name, it is worth noting that using the device model or brand name as part of the SSID is not recommended, as this could create a security vulnerability.
