@@ -693,3 +693,70 @@ Also known as Dynamic Host Configuration Protocol, this is a network protocol th
 - Design Considerations
 
 Regarding the network name, it is worth noting that using the device model or brand name as part of the SSID is not recommended, as this could create a security vulnerability.
+
+## Communication Protocols
+
+These are necessary for devices to communicate successfully on a network. This success is only possible if they follow a common set of rules (protocols).
+
+- Why?
+These protocols define how communication between devices must occur so that information sent by one host is received and understood by another.
+
+To illustrate how this works: two people speaking via walkie-talkies must agree on common points, such as who is sending the message and who is receiving it, as well as when and how the message is delivered.
+
+- Why protocols are important
+
+Protocols enable devices to interpret information transmitted and received on a network. Consequently, if devices do not or cannot follow the necessary protocols, communication between them will likely fail.
+
+### Network Protocol characteristics
+
+These are divided into six sections:
+
+1 - Message format
+2 - Message size
+3 - Timing
+4 - Encoding
+5 - Encapsulation
+6 - Message pattern
+
+- Message format
+
+When a message is transmitted, it must follow a specific format or structure. This format defines how the information is organized so that the receiving device knows how to interpret it.
+
+- Message size
+
+Protocols can also define the maximum allowed size for transmitted information. This size may vary depending on the communication channel used; for example, a large message might need to be split into three smaller parts before being sent across the network.
+
+- Timing
+
+Communication synchronization can affect various aspects of the process, particularly because network communication relies heavily on it.
+
+It can influence the speed at which bits are transmitted, when a device is permitted to send data, or even the amount of data transmitted at once. Without this protocol, devices might transmit information in an incoherent or incomprehensible manner.
+
+- Encoding
+
+Before information can travel across a network, it must be represented in a suitable format (crucial for the security of the transmitted data) to allow for transmission. The receiving host then converts the message into bits to interpret the incoming signals and recover the transmitted information.
+
+- Encapsulation
+
+A message requires additional information to reach its destination correctly. This process is known as encapsulation.
+
+- Messaging patterns
+
+Protocols also serve to define how devices exchange messages with one another. One such communication pattern is "request-response".
+
+### Summary of communication Protocols
+
+Presented concisely and divided into sections:
+- Network communication requires protocols, acting as rules to ensure information is transmitted securely and properly.
+
+- Message format defines the structure of the transmitted message.
+
+- Message size determines the amount of information that can be transmitted within each segment.
+
+- Timing defines when devices communicate and the speed at which information is transmitted.
+
+- Encoding converts information into signals so it can travel across the network.
+
+- Encapsulation adds source and destination addressing so that data can travel meaningfully.
+
+- message patterns serve to define how devices exchange messages with each other.
