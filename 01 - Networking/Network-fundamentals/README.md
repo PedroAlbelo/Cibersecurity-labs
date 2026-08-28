@@ -793,3 +793,104 @@ Broken down into sections:
 - IPv4 and IPv6 provide network addressing and communication.
 
 - RFC stands for "Request for Comments". These documents record the development and specification of Internet technologies and standards.
+
+## Network Communication Models
+
+As previously discussed, protocols enable devices to exchange information within a network.
+Here, we will introduce the specific protocols involved:
+
+- HTTP
+- TCP
+- IP
+- Ethernet
+
+Note: Each has a distinct function, yet they cooperate during network communication.
+
+### Protocol Stack
+
+Before discussing each protocol individually, it is important to understand how they operate. Specifically, how they are stacked and organized into layers.
+
+Each function contributes to the communication process. For instance:
+
+HTTP -> Application communication
+
+TCP -> Transport communication
+
+IP -> Network communication
+
+Ethernet -> Network access
+
+Together, these protocols constitute the communication process.
+
+- Why use layers?
+
+Protocols organized into distinct layers benefit from clearer, more defined interfaces and functions, which facilitates their development.
+
+### TCP/IP Model Layers
+
+- Application Layer -> HTTP
+
+The application layer is the one closest to the user, as it is responsible for data presentation and communication support. A common example is HTTP, which is used for communication between web browsers and web servers.
+
+Basic example:
+Browser -> HTTP
+
+- Transport Layer -> TCP
+
+The transport layer is responsible for host-to-host communication. TCP is an example of a protocol that provides reliable communication between devices. It helps ensure that data is delivered correctly and in the proper sequence, guaranteeing arrival without loss.
+
+- Internet Layer -> IP
+
+The Internet layer is responsible for logical addressing and determining how packets move across the network. A common example is IP. It is responsible for delivering packets from one host to another across interconnected networks. In short, it defines the address and finds the path for the packet to reach its destination.
+
+- Network Access layer -> Ethernet
+
+Responsible for the hardware and media used to access the network. A common example is "Ethernet". It defines how devices communicate on the local network and how data is placed onto the network media.
+
+- Simplifying:
+
+APPLICATION
+Data and application communication
+
+TRANSPORT
+Communication between hosts
+
+INTERNET
+Path through the network
+
+NETWORK ACCESS
+Network hardware and media
+
+Using the protocols shown in this section:
+
+HTTP
+↓
+TCP
+↓
+IP
+↓
+Ethernet
+
+- Summarizing what was studied regarding the TCP/IP Model
+
+explained in brief sections:
+
+- Protocol interaction can be represented as a protocol stack.
+
+- Network communication requires multiple protocols working together.
+
+- Layered models separate network functions into smaller areas of responsibility.
+
+- The TCP/IP model represents the protocol structure used for internet communications.
+
+- The TCP/IP model has four layers: application, transport, internet, and network access.
+
+- HTTP is an example for the application layer.
+
+- TCP is an example for the transport layer.
+
+- IP is an example for the internet layer.
+
+- Ethernet is an example associated with the network access layer.
+
+- A protocol model represents how protocols are organized and interact.
