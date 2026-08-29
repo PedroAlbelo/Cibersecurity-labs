@@ -833,19 +833,26 @@ Protocols organized into distinct layers benefit from clearer, more defined inte
 The application layer is the one closest to the user, as it is responsible for data presentation and communication support. A common example is HTTP, which is used for communication between web browsers and web servers.
 
 Basic example:
+
 Browser -> HTTP
 
 - Transport Layer -> TCP
 
-The transport layer is responsible for host-to-host communication. TCP is an example of a protocol that provides reliable communication between devices. It helps ensure that data is delivered correctly and in the proper sequence, guaranteeing arrival without loss.
+The transport layer is responsible for host-to-host communication. TCP is an example of a protocol that provides reliable communication between devices.
+
+It helps ensure that data is delivered correctly and in the proper sequence, guaranteeing arrival without loss.
 
 - Internet Layer -> IP
 
-The Internet layer is responsible for logical addressing and determining how packets move across the network. A common example is IP. It is responsible for delivering packets from one host to another across interconnected networks. In short, it defines the address and finds the path for the packet to reach its destination.
+The Internet layer is responsible for logical addressing and determining how packets move across the network. A common example is IP. It is responsible for delivering packets from one host to another across interconnected networks.
+
+In short, it defines the address and finds the path for the packet to reach its destination.
 
 - Network Access layer -> Ethernet
 
-Responsible for the hardware and media used to access the network. A common example is "Ethernet". It defines how devices communicate on the local network and how data is placed onto the network media.
+Responsible for the hardware and media used to access the network. A common example is "Ethernet". 
+
+It defines how devices communicate on the local network and how data is placed onto the network media.
 
 - Simplifying:
 
@@ -871,7 +878,7 @@ IP
 ↓
 Ethernet
 
-- Summarizing what was studied regarding the TCP/IP Model
+### Summarizing what was studied regarding the TCP/IP Model
 
 explained in brief sections:
 
