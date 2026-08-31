@@ -927,7 +927,9 @@ The OSI model is a reference model designed to describe the functions necessary 
 
 - Difference between a protocol model (TCP/IP) and a reference model
 
-A protocol model follows the concept of a protocol suite, a collection of protocols that, when combined, provide the functions necessary for network communication (such as the TCP/IP model). In contrast, a reference model describes the functions that must occur at each communication layer without specifying exactly how those functions should be implemented.
+A protocol model follows the concept of a protocol suite, a collection of protocols that, when combined, provide the functions necessary for network communication (such as the TCP/IP model). 
+
+In contrast, a reference model describes the functions that must occur at each communication layer without specifying exactly how those functions should be implemented.
 
 Illustrated by a diagram:
 
@@ -1026,3 +1028,115 @@ According to this section, the OSI model is primarily used in network design, op
 - The physical layer handles the physical mechanisms required for bit transmission
 
 - The OSI model is generally useful for describing, designing, operating, and troubleshooting networks.
+
+## The Access Layer
+
+To understand how communication occurs over an Ethernet network, it is important to learn a bit more about encapsulation and Ethernet frames, and to delve deeper into the Access Layer.
+
+In general, before information is transmitted across a network, it must be placed in a specific format. One of the fundamental processes involved in this is called encapsulation, the encapsulated information is transmitted using a structure known as an "Ethernet frame."
+
+### Encapsulation
+
+Encapsulation is the process of placing one message format inside another before transmission. A helpful analogy for understanding this concept is sending a physical letter: the letter contains the message, but before it can be sent, it must be placed in an envelope that bears the sender's and recipient's addresses. Network communication follows this same principle:
+
+
+Data -> additional protocol information -> encapsulated network message -> Transmission.
+
+
+Important note: A frame acts as the Layer 2 structure used to transport information across the local network.
+
+
+- Encapsulation in network communication
+
+
+Different network protocols add information necessary for their specific functions (as previously discussed in this fundamentals study). For instance, IP includes addressing information to identify a packet's source and destination. This creates a layered structure around the original data.
+
+- Why does this happen?
+
+The layering process is like placing boxes inside one another. Since a network cable only understands electricity, a router only understands addresses (IP), and a web browser only understands the final message (the letter inside the envelope), each layer acts as a new envelope containing the previous one. 
+
+### Decapsulation
+
+The reverse process (decapsulation) occurs when the destination receives the transmitted information; the protocol information added during encapsulation is processed and removed. To use a quick analogy, it is like the recipient of a letter removing it from the envelope:
+
+DATA -> ENCAPSULATION -> network transmission -> DECAPSULATION -> ORIGINAL DATA
+
+### Ethernet Frame
+
+An Ethernet frame is the structured unit used by Ethernet to transport data between network interfaces. The frame contains several fields, each performing a specific function. Therefore, it is important to first understand the Preamble and the NIC.
+
+- NIC
+
+Also known as a Network Interface Card, this is the hardware component in your computer that allows it to connect to the network, whether via a network cable (Ethernet) or Wi-Fi.
+
+---
+
+- Preamble
+
+It helps synchronize the receiving device with the incoming bitstream (between the sender's NIC and the receiver's NIC via the cable). Before information is processed, the receiver must be able to synchronize with the transmitted signal.
+
+---
+
+- Start Frame Delimiter
+
+This indicates that the preamble has ended and the actual Ethernet frame data is beginning. It identifies the transition between the synchronization information and the frame itself.
+
+---
+
+- Destination MAC Address
+
+Identifies the network interface on the local network that is supposed to receive the Ethernet frame. Receivers can examine this field to determine if the frame is intended for them.
+
+---
+
+- Source MAC Address
+
+Identifies the network interface that transmitted the frame.
+
+---
+
+- Length / Type
+
+Depending on how the field is used, it can indicate one of two things: the length of the encapsulated data or the type of protocol carried within the frame (for example, whether it is an IPv4 or IPv6 packet).
+
+---
+
+- Data
+
+This section contains information received from upper layers; for instance, the Ethernet frame might contain an IP packet. Thus, its responsibility is to transport the frame across the Ethernet network.
+
+---
+
+- Frame Check Sequence
+
+Also known as FCS, it is located at the end of the Ethernet frame, its purpose is to help the receiving device detect or verify transmission errors.
+
+- Summary of Encapsulation and Ethernet frame fields
+
+Summarized in brief sections:
+
+- Encapsulation places one message format inside another.
+
+- De-encapsulation reverses the encapsulation process at the receiving device.
+
+- Network protocols add information necessary for communication.
+
+- Ethernet uses a structure called a frame.
+
+- Ethernet frames transport information between network devices.
+
+- The preamble helps synchronize the receiving device.
+
+- The Start Frame Delimiter identifies the beginning of the frame.
+
+- The destination MAC address identifies the receiving interface.
+
+- The source address identifies the transmitting interface.
+
+- The Length/Type field identifies informations regarding the payload or encapsulated protocol.
+
+- The frame check sequence helps detect transmission errors.
+
+- Ethernet standards define the frame format, size, timing, and encoding.
+
+- Ethernet operates at the network access layer of the TCP/IP model.
