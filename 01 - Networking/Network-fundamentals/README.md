@@ -856,26 +856,38 @@ It defines how devices communicate on the local network and how data is placed o
 
 - Simplifying:
 
-APPLICATION
+APPLICATION:
+
 Data and application communication
 
-TRANSPORT
+TRANSPORT:
+
 Communication between hosts
 
-INTERNET
+INTERNET:
+
 Path through the network
 
-NETWORK ACCESS
+NETWORK ACCESS:
+
 Network hardware and media
+
+---
 
 Using the protocols shown in this section:
 
 HTTP
+
 ↓
+
 TCP
+
 ↓
+
 IP
+
 ↓
+
 Ethernet
 
 ### Summarizing what was studied regarding the TCP/IP Model
@@ -901,3 +913,116 @@ explained in brief sections:
 - Ethernet is an example associated with the network access layer.
 
 - A protocol model represents how protocols are organized and interact.
+
+---
+
+### The OSI Model
+
+There are two basic types of models when it comes to network communication:
+
+- Protocol model
+- Reference model
+
+The OSI model is a reference model designed to describe the functions necessary for network communication.
+
+- Difference between a protocol model (TCP/IP) and a reference model
+
+A protocol model follows the concept of a protocol suite, a collection of protocols that, when combined, provide the functions necessary for network communication (such as the TCP/IP model). In contrast, a reference model describes the functions that must occur at each communication layer without specifying exactly how those functions should be implemented.
+
+Illustrated by a diagram:
+
+Protocol model -> specific protocol suite -> protocol organization
+
+Reference model -> describes a reference -> describes functions -> does not define an implementation.
+
+- What OSI Model is?
+
+OSI stands for Open Systems Interconnection; the model was created through the OSI project within the International Organization for Standardization (ISO).
+
+It is widely used to describe and understand the various functions involved in network communication. It is divided into seven layers.
+
++----------------------+
+| 7 - Application      | 
++----------------------+
+| 6 - Presentation     | 
++----------------------+
+| 5 - Session          | 
++----------------------+
+| 4 - Transport        | 
++----------------------+
+| 3 - Network          | 
++----------------------+
+| 2 - Data Link        | 
++----------------------+
+| 1 - Physical         | 
++----------------------+
+
+To gain a deeper understanding of the OSI model, it is necessary to explain each layer so that its objectives can be understood.
+
+- Layer 7 - Application
+
+The Application Layer contains protocols used for inter-process communication; it represents the network functions used by applications to communicate. This is the highest layer of the OSI model. 
+
+- Layer 6 - Presentation
+
+This layer provides a common representation for data transferred between application-layer services; its goal is to ensure that information exchanged between applications can be represented in a usable format.
+
+- Layer 5 - Session
+
+This layer provides services to the presentation layer. It helps organize the communication dialogue and manage data exchange, thereby handling the management of communication sessions between systems.
+
+- Layer 4 - Transport
+
+This layer provides services for communication between end devices. It performs important functions such as segmenting, transferring, and reassembling data, supporting individual communications between end devices.
+
+- Layer 3 - Network
+
+This layer provides services for the exchange of individual data units across a network between identified end devices, making it responsible for functions related to communication between identified devices on a network.
+
+- Layer 2 - Data Link
+
+This layer describes the methods for exchanging data frames between devices on a shared network medium. It provides mechanisms used by devices sharing the same communication medium to exchange these frames.
+
+- Layer 1 - Physical
+
+This layer describes the mechanical, electrical, and functional means necessary to activate, deactivate, and maintain physical connections and to transmit bits from a network device. It is the lowest layer of the OSI model.
+
+- Structure
+
+A simple way to visualize this structure is:
+
+User/Application functions -> Application -> Presentation -> Session -> Transport -> Network -> Data Link -> Physical -> Network hardware
+
+### OSI as a reference model
+
+The OSI model describes which functions should occur at different stages of communication without mandating a specific implementation. the model provides a common way to discuss networking concepts.
+
+- Why is it useful?
+
+According to this section, the OSI model is primarily used in network design, operational specifications, understanding network functions, and troubleshooting. 
+
+### Summary of the OSI Model
+
+- Network models divide communication into layers
+
+- There are two important categories of network models: protocol models and reference models
+
+- A reference model describes network functions without specifying exactly how they should be implemented, as previously mentioned
+
+- OSI stands for Open Systems Interconnection
+
+- The application layer provides inter-process communication functions
+
+- The presentation layer provides a common data representation
+
+- The session layer organizes the dialogue and manages data exchange
+
+- The transport layer segments, transfers, and reassembles data
+
+- The network layer provides services for data exchange between identified end devices
+
+- The data link layer exchanges frames across a common medium
+
+- The physical layer handles the physical mechanisms required for bit transmission
+
+- The OSI model is generally useful for describing, designing, operating, and troubleshooting networks.
