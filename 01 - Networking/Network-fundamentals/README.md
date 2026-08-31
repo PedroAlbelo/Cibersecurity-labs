@@ -130,6 +130,8 @@ based on this analysis, the larger and more complex a network becomes, the more 
 
 - Every connected device can increase the cyberattack that cybersecurity professionals need to protect.
 
+--- 
+
 ## 2. Data Transmission
 
 ### What is data transmission?
@@ -172,6 +174,8 @@ A brief, bulleted summary of the points I felt were worth highlighting:
 - Binary data are converted into signals to travel through a network.
 
 - Understanding how data is transmitted provides a foundation for analyzing network traffic in cybersecurity.
+
+---
 
 ## 3. Bandwidth & Throughput
 
@@ -242,6 +246,8 @@ Topics that I learned in this module:
 - The Ping command is useful for observing latency and packet loss.
 
 - Network Performance metrics can provide useful information during cybersecurity analyses.
+
+---
 
 ## 4. Clients & Servers
 
@@ -354,6 +360,8 @@ Key concepts covered include:
 
 - P2P networks allow devices to act as both clients and servers.Furthermore, they are easy to set up and low-cost, though they have limitations regarding security and scalability.
 
+---
+
 ## 5. Network Components
 
 - What are they?
@@ -429,6 +437,8 @@ A brief recap of what was previously discussed:
 
 - A firewall filters network traffic based on security rules.
 
+---
+
 ## 6. ISP Connectivity Options
 
 An Internet Service Provider (ISP) is the company or organization responsible for providing Internet access. The ISP establishes the connection between a private network, such as a home network or a small business network and the Internet. Without an ISP, a home network would still allow local devices to communicate with one another, but those devices would lack general Internet access.
@@ -503,6 +513,8 @@ To briefly summarize the points covered:
 - The available connection depends heavily on geographic location and the provider's infrastructure.
 
 - Satellite internet is useful in remote areas lacking cable or cellular coverage.
+
+---
 
 ## 7. Wireless Network
 
@@ -611,7 +623,9 @@ A brief, objective overview of the topics covered:
 
 - Wireless networks always require adequate security because their signals are accessible to anyone nearby.
 
-## Building a Home Network
+---
+
+## 8. Building a Home Network
 
 For any cybersecurity student or professional, it is essential to understand and know how to configure an integrated wireless router and a wireless client to establish a secure internet connection.
 
@@ -694,7 +708,7 @@ Also known as Dynamic Host Configuration Protocol, this is a network protocol th
 
 Regarding the network name, it is worth noting that using the device model or brand name as part of the SSID is not recommended, as this could create a security vulnerability.
 
-## Communication Protocols
+## 9. Communication Protocols
 
 These are necessary for devices to communicate successfully on a network. This success is only possible if they follow a common set of rules (protocols).
 
@@ -762,7 +776,9 @@ Presented concisely and divided into sections:
 
 - message patterns serve to define how devices exchange messages with each other.
 
-### Communication Standards
+---
+
+## 10. Communication Standards
 
 Nowadays, even with modern devices from different manufacturers and with varying operating systems and hardware architectures, they are still able to communicate with one another, thanks to communication standards.
 
@@ -794,7 +810,9 @@ Broken down into sections:
 
 - RFC stands for "Request for Comments". These documents record the development and specification of Internet technologies and standards.
 
-## Network Communication Models
+---
+
+## 11. Network Communication Models
 
 As previously discussed, protocols enable devices to exchange information within a network.
 Here, we will introduce the specific protocols involved:
@@ -943,23 +961,10 @@ OSI stands for Open Systems Interconnection; the model was created through the O
 
 It is widely used to describe and understand the various functions involved in network communication. It is divided into seven layers.
 
-+----------------------+
-| 7 - Application      | 
-+----------------------+
-| 6 - Presentation     | 
-+----------------------+
-| 5 - Session          | 
-+----------------------+
-| 4 - Transport        | 
-+----------------------+
-| 3 - Network          | 
-+----------------------+
-| 2 - Data Link        | 
-+----------------------+
-| 1 - Physical         | 
-+----------------------+
 
 To gain a deeper understanding of the OSI model, it is necessary to explain each layer so that its objectives can be understood.
+
+---
 
 - Layer 7 - Application
 
@@ -988,6 +993,8 @@ This layer describes the methods for exchanging data frames between devices on a
 - Layer 1 - Physical
 
 This layer describes the mechanical, electrical, and functional means necessary to activate, deactivate, and maintain physical connections and to transmit bits from a network device. It is the lowest layer of the OSI model.
+
+---
 
 - Structure
 
@@ -1029,11 +1036,13 @@ According to this section, the OSI model is primarily used in network design, op
 
 - The OSI model is generally useful for describing, designing, operating, and troubleshooting networks.
 
-## The Access Layer
+---
+
+## 12. The Access Layer
 
 To understand how communication occurs over an Ethernet network, it is important to learn a bit more about encapsulation and Ethernet frames, and to delve deeper into the Access Layer.
 
-In general, before information is transmitted across a network, it must be placed in a specific format. One of the fundamental processes involved in this is called encapsulation, the encapsulated information is transmitted using a structure known as an "Ethernet frame."
+In general, before information is transmitted across a network, it must be placed in a specific format. One of the fundamental processes involved in this is called encapsulation, the encapsulated information is transmitted using a structure known as an "Ethernet frame".
 
 ### Encapsulation
 
@@ -1053,11 +1062,11 @@ Different network protocols add information necessary for their specific functio
 
 - Why does this happen?
 
-The layering process is like placing boxes inside one another. Since a network cable only understands electricity, a router only understands addresses (IP), and a web browser only understands the final message (the letter inside the envelope), each layer acts as a new envelope containing the previous one. 
+The layering process is like placing boxes inside one another. Since a network cable only understands electricity, a router only understands addresses (IP), and a web browser only understands the final message (the letter inside the envelope), each layer acts as a new envelope containing the previous one.
 
 ### Decapsulation
 
-The reverse process (decapsulation) occurs when the destination receives the transmitted information; the protocol information added during encapsulation is processed and removed. To use a quick analogy, it is like the recipient of a letter removing it from the envelope:
+The reverse process (decapsulation) occurs when the destination receives the transmitted information. The protocol information added during encapsulation is processed and removed. To use a quick analogy, it is like the recipient of a letter removing it from the envelope:
 
 DATA -> ENCAPSULATION -> network transmission -> DECAPSULATION -> ORIGINAL DATA
 
@@ -1111,7 +1120,9 @@ This section contains information received from upper layers; for instance, the 
 
 Also known as FCS, it is located at the end of the Ethernet frame, its purpose is to help the receiving device detect or verify transmission errors.
 
-- Summary of Encapsulation and Ethernet frame fields
+---
+
+### Summary of Encapsulation and Ethernet frame fields
 
 Summarized in brief sections:
 
@@ -1140,3 +1151,5 @@ Summarized in brief sections:
 - Ethernet standards define the frame format, size, timing, and encoding.
 
 - Ethernet operates at the network access layer of the TCP/IP model.
+
+---
