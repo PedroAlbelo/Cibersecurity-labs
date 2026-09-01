@@ -1153,3 +1153,56 @@ Summarized in brief sections:
 - Ethernet operates at the network access layer of the TCP/IP model.
 
 ---
+
+### Ethernet Switches
+
+Switches operate at Layer 2 (the data link layer) of the OSI model because they make forwarding decisions based on information from that specific layer. Specifically, the switch uses MAC addresses to determine where frames should be sent.
+
+A switch typically does not need to transmit every frame to every connected device.
+
+### MAC Address Tables
+
+Every switch maintains an internal table known as a "MAC address table." This table allows the switch to determine which interface should be used to forward an Ethernet frame.
+The process can be summarized as follows:
+
+MAC Address -> MAC Address Table -> Switch Port -> Destination Device
+
+- How does this work?
+
+The switch learns addresses by examining the source MAC address of incoming frames; for instance, whenever a frame enters a switch port, the switch checks the source MAC address and the ingress port. If that MAC address is not yet associated with that interface, the switch adds the information to its MAC address table.
+
+---
+
+Note: It is important to remember one of the key distinctions in Ethernet switching:
+
+SOURCE MAC -> LEARNING
+
+DESTINATION MAC -> FORWARDING DECISION
+
+While the switch learns device locations by examining the source MAC address, the destination MAC address determines where a frame should be sent.
+
+---
+
+### Summarizing the Access Layer
+
+Broken down into key points:
+
+- The access layer connects end devices to the network.
+
+- Ethernet switches are frequently used as access-layer devices.
+
+- Ethernet hubs are obsolete devices that repeat traffic and create shared collision domains.
+
+- Switches make forwarding decisions using MAC addresses.
+
+- A switch maintains a MAC address table.
+
+- The MAC address table associates MAC addresses with switch ports.
+
+- Switches learn MAC addresses from the source MAC address of incoming frames.
+
+- If the destination MAC address is known, the frame can be forwarded only to the appropriate port; if it is unknown, the switch performs unknown unicast flooding.
+
+- The switch does not forward the frame out of the port on which it was received.
+
+- Dynamic MAC entries use an aging mechanism.
