@@ -1256,6 +1256,21 @@ Network devices use this information to help deliver packets to their destinatio
 
 IPv4 addressing allows hosts to communicate beyond their local network, as noted previously and in the 'IPv4-Web-Server-communication' practical lab
 
+### IPv4 Address Structure
+
+In terms of IPv4 addressing, for two devices to communicate directly on the same local network, they must reside on the same network segment. If they are on different networks, communication must pass through a router.
+
+An IPv4 address is divided into two main parts, defined by the network mask: the Network and the Host. For example, with a /24 mask (255.255.255.0) and the IP address 192.168.3.10:
+
+
+192.168.3 is the Network (specifically, the first three octets identify the network portion of the address)
+
+
+.10 is the Host
+
+
+In practice, if a company has three departments on separate subnets and a computer is physically moved from one department to another, its IPv4 address must be reconfigured (either manually or via DHCP) to match the new department's network block. Otherwise, it will lose access to that network's resources and its gateway.
+
 ### IPv4 Address Summary
 
 A summary of the key concepts I studied in this section:
@@ -1269,3 +1284,5 @@ A summary of the key concepts I studied in this section:
 - Addresses must be unique within the network where they are used and must be configured correctly.
 
 - Each IPv4 packet contains a source and destination IPv4 address.
+
+--- 
