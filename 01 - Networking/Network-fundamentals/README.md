@@ -1206,3 +1206,66 @@ Broken down into key points:
 - The switch does not forward the frame out of the port on which it was received.
 
 - Dynamic MAC entries use an aging mechanism.
+
+---
+
+## 13. The Internet Protocol
+
+In this section I will explain the characteristics of an IP address, within that I will talk about the purpose of the IPv4 Address and how its structure is used, in addition I have also documented in practice how this logic works in the folder 'IPv4-Web-Server-Communication'
+
+Before starting, it is good to emphasize in this section that an IPv4 address is a logical network address used to identify a host or network interface on an IP network.
+
+Consequently, a device requires a correctly configured IPv4 address to communicate across most local networks and the Internet.
+
+Furthermore, unlike a MAC address which identifies a network interface at the local Ethernet level, an IPv4 address provides logical addressing that allows communication on IP networks.
+
+### IPv4 Address
+
+Every host needs an IPv4 address to access the internet and virtually all LANs today. Therefore, it must be correctly configured and unique within the LAN for local communication, and also correctly configured to be unique worldwide for remote communication. This is how a host communicates with other devices on the Internet.
+
+Moreover, an IPv4 address is assigned to a network interface, typically a NIC (Network Interface Card); for example:
+
+Host -> Network Interface (NIC) -> IPv4 Address
+
+The IPv4 address identifies that specific network interface within the IP network.
+
+---
+
+It is important to remember that a device may contain more than one network interface, meaning a single device can have multiple IPv4 addresses. For instance, if each interface participates in an IP network, each interface can have its own IPv4 address.
+
+Routers are a key example of this, as they typically contain multiple interfaces connecting different networks.
+
+---
+
+### Source and Destination IPv4 Addresses
+
+All IPv4 packets contain two fundamental addresses: the source address and the destination address.
+
+- Source IPv4 address -> Identifies the packet's source
+
+- Destination IPv4 address -> Identifies where the packet is to be delivered
+
+
+For example:
+
+Source host (192.168.1.10) - -  - Packet -- Source: 192.168.1.10 -- Destination: 192.168.1.20 - > Destination host 192.168.1.20
+
+Network devices use this information to help deliver packets to their destination
+
+- Internet communication
+
+IPv4 addressing allows hosts to communicate beyond their local network, as noted previously and in the 'IPv4-Web-Server-communication' practical lab
+
+### IPv4 Address Summary
+
+A summary of the key concepts I studied in this section:
+
+- IPv4 provides logical addressing for network communication.
+
+- A host typically requires an IPv4 address to participate in an IPv4 network.
+
+- A device with multiple network interfaces can have multiple IPv4 addresses.
+
+- Addresses must be unique within the network where they are used and must be configured correctly.
+
+- Each IPv4 packet contains a source and destination IPv4 address.
