@@ -1330,3 +1330,83 @@ This type of transmission reduces traffic by allowing a host to send a single pa
 Hosts that receive multicast packets are known as multicast clients; they use services requested by a client program to subscribe to the multicast group. Each such group is represented by a unique destination IPv4 multicast address.
 
 Routing protocols like OSPF utilize multicast transmissions; for instance, OSPF enabled routers communicate with one another using the reserved multicast address 224.0.0.5. Consequently, only OSPF enabled devices process packets sent to this destination IPv4 address, while all other devices ignore them.
+
+---
+
+### Public vs. Private IPv4
+
+A public IPv4 address is one that can generally be routed globally over the internet and must be unique. Meanwhile, a private IPv4 address is used within internal networks, such as at home, in a company, or in a laboratory; it is not directly routable over the internet and can be reused by different networks.
+
+Furthermore, an essential piece of information for this study is that the three private ranges defined by RFC 1918 are:
+
+`Network: 10.0.0.0/8 - - - Private range: 10.0.0.0 - 10.255.255.255`
+`Network: 172.16.0.0/12 - - - Private range: 172.16.0.0 - 172.31.255.255`
+`Network: 192.168.0.0/16 - - - Private range: 192.168.0.0 - 192.168.255.25`
+
+So, when talking about private addresses, some examples... These are:
+
+`192.168.1.20`
+
+`10.0.0.15`
+
+`172.20.10.5`
+
+- Why do private addresses exist?
+ 
+Because IPv4 address space is limited, and with the growth of the internet it became clear that there wouldn't be enough public IPv4 addresses to give each device a unique public address, private blocks emerged. For example, a house might have:
+
+`192.168.1.10`
+
+`192.168.1.11`
+
+`192.168.1.12`
+
+`192.168.1.13`
+
+---
+
+### NAT
+
+(Network Address Translation) is when a device with a private IP needs to access the internet. The private address usually needs to be translated into a public IPv4 address.
+
+The idea works like this:
+
+`Private IPv4 -> NAT -> Public IPv4 -> Internet`
+
+---
+
+### Loopback
+
+These loopback addresses are commonly identified simply as 127.0.0.1. Essentially, this refers to the computer itself, as it does not attempt to reach another machine; in other words, these are special addresses used by a host to direct traffic to itself.
+
+---
+
+### Link-local/APIPA
+
+Another special range is `169.254.0.0/16`. These addresses are known as link-local or APIPA addresses.
+
+They may appear when a device attempts to obtain an IP configuration automatically but cannot obtain it through another method. For example:
+
+`PC -> Requests IP -> Cannot obtain address -> 169.254.x.x`
+
+Notes: If I am troubleshooting a network and I find `169.254.34.87`, this is a strong indication that the device is using a self-assigned address.
+
+---
+
+### Legacy Classful Addressing
+
+Historically, IPv4 was divided into classes:
+
+Class A - used a prefix (/8) and was intended for very large networks
+
+Class B - used a prefix (/16) and was intended for medium/large networks
+
+Class C - used a prefix (/24) and was intended for smaller networks
+
+however, this division was abandoned due to its waste of addresses, so it was replaced by classless addressing
+
+---
+
+### Who controls the public addresses?
+
+At the top of this administrative hierarchy is IANA (Internet Assigned Numbers Authority); IANA manages and distributes large blocks of IPv4 and IPv6 addresses to RIRs (Regional Internet Registries).
