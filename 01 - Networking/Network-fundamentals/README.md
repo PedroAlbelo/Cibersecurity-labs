@@ -1256,6 +1256,8 @@ Network devices use this information to help deliver packets to their destinatio
 
 IPv4 addressing allows hosts to communicate beyond their local network, as noted previously and in the 'IPv4-Web-Server-communication' practical lab
 
+---
+
 ### IPv4 Address Structure
 
 In terms of IPv4 addressing, for two devices to communicate directly on the same local network, they must reside on the same network segment. If they are on different networks, communication must pass through a router.
@@ -1270,6 +1272,8 @@ An IPv4 address is divided into two main parts, defined by the network mask: the
 
 
 In practice, if a company has three departments on separate subnets and a computer is physically moved from one department to another, its IPv4 address must be reconfigured (either manually or via DHCP) to match the new department's network block. Otherwise, it will lose access to that network's resources and its gateway.
+
+---
 
 ### IPv4 Address Summary
 
@@ -1286,3 +1290,43 @@ A summary of the key concepts I studied in this section:
 - Each IPv4 packet contains a source and destination IPv4 address.
 
 --- 
+
+## 14. IPv4 and Network Segmentation
+
+Although still discussing IPv4, it's noteworthy that this is a new section compared to the previous one, allowing for a more in-depth exploration of the use of IPv4 unicast, broadcast, and multicast addresses, explaining public, private, and reserved IPv4 addresses, and explaining how subnetting segments a network to allow for better communication.
+
+### IPv4 Unicast
+
+Unicast transmission refers to a device sending a message to another in one-to-one communication.
+
+- ​​How does it work?
+
+A unicast packet has a destination IP address that is a unicast address, directing it to a single recipient. A source IP address can only be a unicast address, as the packet can only originate from a single source.
+
+Furthermore. It is important to note that Unicast uses only Classes A, B, and C (1.0.0.0 to 223.255.255.255) and is further divided into internal network IPs (e.g., 192.168.x.x; which do not access the web directly) and public Internet IPs.
+
+---
+
+### IPv4 Broadcast
+
+Broadcast transmission refers to a device sending a message to all devices on a network a one-to-all communication. A broadcast must be processed by all devices within the same broadcast domain. Furthermore, a broadcast domain identifies all hosts on the same network segment.
+
+There are two types of broadcasts:
+
+- Directed broadcast
+
+- Limited broadcast
+
+A directed broadcast is sent to all hosts on a specific network. For example, a host on the 172.16.4.0/24 network sends a packet to 172.16.4.255. Meanwhile, limited broadcast applies only to the local network (255.255.255.255); the router immediately blocks this packet because it never leaves the local network.
+
+Note: IPv4 uses broadcast packets, whereas there are no broadcast packets in IPv6.
+
+---
+
+### IPv4 Multicast
+
+This type of transmission reduces traffic by allowing a host to send a single packet to a specific set of hosts participating in a multicast group.
+
+Hosts that receive multicast packets are known as multicast clients; they use services requested by a client program to subscribe to the multicast group. Each such group is represented by a unique destination IPv4 multicast address.
+
+Routing protocols like OSPF utilize multicast transmissions; for instance, OSPF enabled routers communicate with one another using the reserved multicast address 224.0.0.5. Consequently, only OSPF enabled devices process packets sent to this destination IPv4 address, while all other devices ignore them.
