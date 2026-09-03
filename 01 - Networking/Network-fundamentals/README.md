@@ -1340,7 +1340,9 @@ A public IPv4 address is one that can generally be routed globally over the inte
 Furthermore, an essential piece of information for this study is that the three private ranges defined by RFC 1918 are:
 
 `Network: 10.0.0.0/8 - - - Private range: 10.0.0.0 - 10.255.255.255`
+
 `Network: 172.16.0.0/12 - - - Private range: 172.16.0.0 - 172.31.255.255`
+
 `Network: 192.168.0.0/16 - - - Private range: 192.168.0.0 - 192.168.255.25`
 
 So, when talking about private addresses, some examples... These are:
@@ -1410,3 +1412,113 @@ however, this division was abandoned due to its waste of addresses, so it was re
 ### Who controls the public addresses?
 
 At the top of this administrative hierarchy is IANA (Internet Assigned Numbers Authority); IANA manages and distributes large blocks of IPv4 and IPv6 addresses to RIRs (Regional Internet Registries).
+
+---
+
+### Broadcast Domains and Segmentation
+
+A broadcast domain is the part of the network where a broadcast message can spread. Therefore, in an Ethernet LAN, certain protocols use broadcast, and when we talk about this, we have two examples:
+
+ARP: which uses Layer 2 broadcast to discover which MAC address is associated with a known IPv4 address on the local network.
+
+DHCP: Uses broadcast to locate a DHCP server and obtain IPv4 configuration.
+
+The idea is:
+
+Host -> Broadcast -> Switch -> All devices in the domain.
+
+- What does a switch do with broadcasts?
+
+The function of a switch is to forward broadcasts through all interfaces, EXCEPT the port where it received the frame.
+
+For example: we have 4 computers in a room; if PC1 sends a broadcast, the switch forwards it to the remaining three but does not send it back to PC1.
+
+- What does a router do?
+
+A router does not forward a received broadcast to its other interfaces.
+
+Therefore:
+
+LAN A
+PCs
+|
+Switch
+|
+Router
+| 
+Switch
+|
+LAN B
+PCs
+
+If a broadcast originates in LAN A, it can circulate through the switches of LAN A, but the router will not send this broadcast to LAN B.
+
+- Switch vs Router
+
+|Device   | Broadcast
+|Switch:    Propagates within the domain
+|Router:    Does not propagate to other domains
+
+In short:
+
+SWITCH
+
+-> spreads broadcast
+
+ROUTER
+
+-> stops the broadcast
+
+---
+
+Knowing this information and advancing this study, it is noticeable that a network that is too large becomes more difficult to control, more subject to excessive traffic, and less organized. Therefore, it is important to understand more about the need to segment a network, which will be the subject of the following discussion.
+
+---
+
+### Network Segmentation and its Needs
+
+As the name is self-explanatory, it means dividing a larger network into smaller subnets, which is quite efficient, especially in large networks such as;
+
+- Less unnecessary traffic (broadcasts are more restricted to smaller groups)
+- Improved performance (fewer devices competing for attention within the same domain)
+- More security control (the administrator can define which subnets can or cannot communicate with each other)
+
+Furthermore, it also reduces the impact of problems. If there is a misconfiguration, hardware/software failure, or malicious traffic, fewer devices will be affected.
+
+### Subnetting
+
+Speaking of subnetting, it's important to present three models:
+
+- By location:
+
+This works by dividing the network according to where each device is physically located (for example, floor of a building).
+
+- By group or function:
+
+This subnetting works by dividing devices according to who uses them or what function they perform.
+
+Example:
+
+`Administration → 10.0.1.0/24`
+`Students → 10.0.2.0/24`
+`Human Resources → 10.0.3.0/24`
+`Accounting → 10.0.4.0/24`
+
+Note: This is very interesting for security.
+
+- Subnetting by device type:
+
+It's also possible to divide the network by equipment type.
+
+Example:
+
+`10.0.1.0/24 → Hosts`
+`10.0.2.0/24 → Printers`
+`10.0.3.0/24 → Servers`
+
+---
+
+Subnetting goes beyond the mathematical calculations of IP addressing; it's a strategic network design decision. Therefore, there is no single model for building subnetting. The ideal structure depends on the operational needs, security, and management requirements of each infrastructure.
+So, according to what I've studied, it's fair to say that the administrator has complete flexibility to define the segmentation logic that best suits their scenario.
+
+---
