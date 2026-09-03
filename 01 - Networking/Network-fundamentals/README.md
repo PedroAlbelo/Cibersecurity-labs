@@ -1597,6 +1597,8 @@ In bullet points, what I learned in summary:
 
 It's important to know that IPv6 addresses are represented by hexadecimal numbers. This base-sixteen number system uses the digits 0 to 9 and the letters A to F; to better understand, these 16 digits are represented as hextets (which I will discuss below), allowing these enormous addresses to be represented in a much more readable format.
 
+![Hexadecimal](images/Hexadecimal.png)
+
 ### IPv6 Addressing Formats
 
 IPv6 addresses are much larger than IPv4 addresses, which is why it's unlikely they will run out.
@@ -1646,5 +1648,47 @@ Golden rule (Only 1 use), The `::` can only be used once per address. Using it m
 - ​​Tiebreaker: If the address has two separate groups of zeros:
 
 the best way is to apply `::` to the longer sequence. Meanwhile, if the sequences are the same length, apply it to the first sequence.
+
+---
+
+## 16. Dynamic Addressing with DHCP
+
+### Static IPv4 Address Assignment
+
+To better understand this concept, it's necessary to know that IPv4 addresses can be assigned statically or dynamically.
+
+With a static assignment, the network administrator must manually configure the network information for a host. At a minimum, this includes:
+
+- IP ​​Address; Identifies the computer on the network.
+
+- Subnet Mask; Identifies the network to which the host is connected.
+
+- Default Gateway; Identifies the network device that the host uses to access the Internet.
+
+The advantages of this type of addressing are as follows: They are useful for printers, servers, and other network devices that need to be accessible to clients on the network. Furthermore, if hosts normally access a server at a specific IPv4 address, it would not be good for that address to change.
+
+Note: When using static IPv4 addressing, it is important to maintain an accurate list of which IPv4 addresses are assigned to which devices. Furthermore, since they are permanent addresses, they are not usually reused.
+
+---
+
+### Dynamic IPv4 Address Assignment
+
+This is the process of automatically configuring network parameters for devices, performed by the DHCP (Dynamic Host Configuration Protocol), which has already been mentioned several times earlier in this study.
+
+One of its important points is that IPv4 addresses are not permanent. When a device disconnects or is turned off, its address returns to an address pool and becomes available to another user. It is also ideal for local area networks with high user turnover and mobile devices (such as laptops and smartphones).
+
+- DHCP Servers
+
+When connecting to Wi-Fi at an airport or restaurant. For the process to work, the device needs to run a DHCP client program that contacts a DHCP server to obtain the IP configuration.
+
+Therefore, how this service is implemented varies depending on the size and structure, for example:
+
+- Medium/large networks:
+
+They usually use local PC-based servers to manage the distribution of addresses.
+
+- Home networks/small businesses:
+
+It generally works with a main DHCP server to provide the external connection and is usually located at the internet service provider (ISP). In these scenarios, home wireless routers play a dual role: they act as DHCP clients of the provider to receive a public IPv4 address and, at the same time, function as DHCP servers for the local network, distributing private IPv4 addresses to connected devices.
 
 ---
