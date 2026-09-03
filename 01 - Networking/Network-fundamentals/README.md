@@ -1519,6 +1519,73 @@ Example:
 ---
 
 Subnetting goes beyond the mathematical calculations of IP addressing; it's a strategic network design decision. Therefore, there is no single model for building subnetting. The ideal structure depends on the operational needs, security, and management requirements of each infrastructure.
+
 So, according to what I've studied, it's fair to say that the administrator has complete flexibility to define the segmentation logic that best suits their scenario.
 
 ---
+
+## 15. IPv6 Addressing Format and Rules
+
+In this section, my goal is to explain the functionalities of IPv6 and how to represent this address.
+
+---
+
+- ​​Why does IPv6 exist?
+
+To discuss this point, it's necessary to understand that initially IPv4 had limited addressing capacity. Over time, the address space became exhausted due to the increasing number of computers, tablets, servers, and so on.
+
+Therefore, IPv6 was created to gradually replace IPv4. The first difference between the two is the address size; for example, IPv4 is 32 bits and IPv6 is 128 bits. This is equivalent to:
+
+`IPv4 ≈ 4.3 billion`
+
+`IPv6 ≈ 340 undecillion addresses`
+
+The goal is to allow a gigantic number of devices to have IP addresses. Furthermore, when the IETF began developing the successor to IPv4, it took the opportunity to correct limitations and add improvements.
+
+The material gives as an example `ICMPv6`, also known as: Internet Control Message Protocol version 6.
+
+In IPv6, ICMPv6 also has functions related to:
+
+- address resolution.
+
+- address autoconfiguration.
+
+---
+
+- ​​NAT (Network Address Translation) operation;
+
+It had a considerable role in delaying the exhaustion of IPv4, although it did not eliminate the need for IPv6 due to its limitations and it is not the definitive solution.
+
+---
+
+### Transition from IPv4 to IPv6
+
+It is noteworthy for anyone studying networks that IPv4 and IPv6 will coexist for quite some time, so techniques were created to allow this transition, highlighting 3 main ones, `Dual stack, Tunneling and translation`, and in summary I have described them as follows;
+
+- Dual Stack:
+
+The device uses IPv4 and IPv6 simultaneously.
+
+- Tunneling:
+
+An IPv6 packet is transported within an IPv4 network, encapsulated in IPv4.
+
+- Translation:
+
+Translation occurs between IPv4 and IPv6 to allow communication between devices using different protocols.
+
+---
+
+### IPv6 & IPv4 Issues Summary
+
+In bullet points, what I learned in summary:
+
+- IPv6 was created as a successor to IPv4 due to the exhaustion of the IPv4 address space.
+
+- IPv4 uses 32-bit addresses, while IPv6 uses 128-bit addresses capable of supporting the continuous growth of the Internet and billions of new devices.
+
+- Private IPv4 addressing and NAT helped slow down the exhaustion of IPv4, but did not solve the demand.
+
+- IPv4 and IPv6 will continue to coexist during the transition to IPv6.
+
+- The long-term goal is native IPv6 communication from source to destination.
