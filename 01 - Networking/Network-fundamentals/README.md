@@ -1589,3 +1589,62 @@ In bullet points, what I learned in summary:
 - IPv4 and IPv6 will continue to coexist during the transition to IPv6.
 
 - The long-term goal is native IPv6 communication from source to destination.
+
+
+---
+
+### Hexadecimal Number System
+
+It's important to know that IPv6 addresses are represented by hexadecimal numbers. This base-sixteen number system uses the digits 0 to 9 and the letters A to F; to better understand, these 16 digits are represented as hextets (which I will discuss below), allowing these enormous addresses to be represented in a much more readable format.
+
+### IPv6 Addressing Formats
+
+IPv6 addresses are much larger than IPv4 addresses, which is why it's unlikely they will run out.
+
+IPv6 addresses are 128 bits long and are written as a sequence of hexadecimal values. More specifically, every four bits are represented by a single hexadecimal digit, totaling 32 hexadecimal values.
+
+An addendum: the preferred format means you write the IPv6 address using all 32 hexadecimal digits. This doesn't necessarily mean it's the ideal method for representing an IPv6 address.
+
+---
+
+Two rules that help reduce the number of digits needed to represent an IPv6 address.
+
+- Rule 1 for abbreviating IPv6 addresses:
+
+Omit leading zeros.
+
+This aims to reduce the size of the address notation by allowing you to remove the leading (left) zeros from any hextet (block of 4 digits).
+
+
+`Example: 01ab becomes 1ab and 0000 becomes just 0.`
+
+
+Except trailing zeros: The rule does NOT apply to trailing zeros, as this would change the address value.
+
+Example: ab00 should remain ab00.
+
+- Rule 2, Double Colon (::)
+
+is used to abbreviate IPv6 addresses by replacing continuous blocks of zeros.
+
+- How?
+
+It replaces a continuous sequence of one or more hexatets composed only of zeros (either 0000 or 0).
+
+Example: `2001:db8:cafe:1:0:0:0:1`
+
+becomes
+
+`2001:db8:cafe:1::1.`
+
+---
+
+Golden rule (Only 1 use), The `::` can only be used once per address. Using it more than once generates ambiguity, making it impossible to know exactly how many blocks of zero each `::` represents.
+
+---
+
+- ​​Tiebreaker: If the address has two separate groups of zeros:
+
+the best way is to apply `::` to the longer sequence. Meanwhile, if the sequences are the same length, apply it to the first sequence.
+
+---
