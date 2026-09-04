@@ -1665,7 +1665,9 @@ With a static assignment, the network administrator must manually configure the 
 
 - Default Gateway; Identifies the network device that the host uses to access the Internet.
 
-The advantages of this type of addressing are as follows: They are useful for printers, servers, and other network devices that need to be accessible to clients on the network. Furthermore, if hosts normally access a server at a specific IPv4 address, it would not be good for that address to change.
+The advantages of this type of addressing are as follows: They are useful for printers, servers, and other network devices that need to be accessible to clients on the network.
+
+Furthermore, if hosts normally access a server at a specific IPv4 address, it would not be good for that address to change.
 
 Note: When using static IPv4 addressing, it is important to maintain an accurate list of which IPv4 addresses are assigned to which devices. Furthermore, since they are permanent addresses, they are not usually reused.
 
@@ -1675,7 +1677,9 @@ Note: When using static IPv4 addressing, it is important to maintain an accurate
 
 This is the process of automatically configuring network parameters for devices, performed by the DHCP (Dynamic Host Configuration Protocol), which has already been mentioned several times earlier in this study.
 
-One of its important points is that IPv4 addresses are not permanent. When a device disconnects or is turned off, its address returns to an address pool and becomes available to another user. It is also ideal for local area networks with high user turnover and mobile devices (such as laptops and smartphones).
+One of its important points is that IPv4 addresses are not permanent. When a device disconnects or is turned off, its address returns to an address pool and becomes available to another user.
+
+It is also ideal for local area networks with high user turnover and mobile devices (such as laptops and smartphones).
 
 - DHCP Servers
 
@@ -1689,6 +1693,9 @@ They usually use local PC-based servers to manage the distribution of addresses.
 
 - Home networks/small businesses:
 
-It generally works with a main DHCP server to provide the external connection and is usually located at the internet service provider (ISP). In these scenarios, home wireless routers play a dual role: they act as DHCP clients of the provider to receive a public IPv4 address and, at the same time, function as DHCP servers for the local network, distributing private IPv4 addresses to connected devices.
+It generally works with a main DHCP server to provide the external connection and is usually located at the internet service provider (ISP). 
+
+In these scenarios, home wireless routers play a dual role: they act as DHCP clients of the provider to receive a public IPv4 address and, at the same time, function as DHCP servers for the local network, distributing private IPv4 addresses to connected devices.
 
 ---
+
