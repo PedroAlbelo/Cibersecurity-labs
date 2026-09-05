@@ -1808,3 +1808,76 @@ In this study, when we talk about a router acting as a boundary between networks
 The term boundary embodies this dual function: the router is the point where your locally managed private network ends and where the public network under the provider's responsibility begins.
 
 ---
+
+## 18. TCP & UDP
+
+This study has already covered TCP in depth, as we may have read, but it's necessary to discuss it again when we mention UDP, another transport layer protocol that also transmits data between applications.
+
+Therefore, although both protocols transport application data, they behave very differently. As seen, while TCP transports data reliably and uses connection-oriented communication, UDP stands out for its simplicity, low overhead, and connectionless communication.
+
+---
+### Differentiating Points Between TCP & UDP
+
+As mentioned, TCP is a connection-oriented transport protocol. That is, before the application data exchange, TCP establishes a logical connection between the two endpoints. Therefore, it's understandable that it was designed for situations where reliable delivery is important.
+
+- How does this happen?
+
+These mechanisms include concepts such as:
+
+- Sequence numbers
+- Acknowledgments
+- Retransmission
+- Ordered delivery
+- Flow control
+
+Meanwhile, UDP is a connectionless transport protocol. That is, it does not establish a connection using a handshake before sending application data. Therefore, it does not guarantee delivery.
+
+- Why use UDP?
+
+Although it may seem inferior to TCP due to its lack of reliability, its purpose is not the same as TCP's. Thus, by having fewer mechanisms in the transport layer, it can provide:
+
+- Lower overhead
+- Simple communication
+- No overhead
+
+This ends up being necessary because for some applications, receiving new information quickly is more important than retransmitting old information.
+
+- Where can I use UDP?
+
+It is frequently used by applications or protocols where low overhead or real time delivery are important.
+
+Examples may include:
+
+- DNS queries
+- Real time audio/video
+- Online games
+- DHCP
+- Streaming applications
+
+However, the exact transport protocol depends on how the application was designed. For example, DNS typically uses UDP for many queries, but it can also use TCP. So while one tends to be more reliable and secure, the other tends to be faster.
+
+---
+
+### Summary of TCP & UDP
+
+The main concepts I learned about TCP and UDP are:
+
+- TCP and UDP operate at the Transport Layer.
+
+- TCP stands for Transmission Control Protocol.
+
+- UDP stands for User Datagram Protocol.
+
+- TCP is connection-oriented, while UDP is not connection-oriented.
+
+- TCP establishes a connection before normal data transfer and provides reliable and ordered delivery.
+
+- TCP uses acknowledgments and retransmission and provides flow control.
+
+- UDP has lower protocol overhead and does not provide automatic retransmission.
+
+- UDP is useful when applications prefer simple or real-time communication.
+
+- TCP and UDP are encapsulated in IP packets.
+
+---
