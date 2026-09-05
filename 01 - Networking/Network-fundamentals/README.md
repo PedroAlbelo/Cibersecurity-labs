@@ -1695,7 +1695,116 @@ They usually use local PC-based servers to manage the distribution of addresses.
 
 It generally works with a main DHCP server to provide the external connection and is usually located at the internet service provider (ISP). 
 
-In these scenarios, home wireless routers play a dual role: they act as DHCP clients of the provider to receive a public IPv4 address and, at the same time, function as DHCP servers for the local network, distributing private IPv4 addresses to connected devices.
+In these scenarios, home wireless routers play a dual role:
+
+they act as DHCP clients of the provider to receive a public IPv4 address and, at the same time, function as DHCP servers for the local network, distributing private IPv4 addresses to connected devices.
 
 ---
 
+## 17. Gateways to Other Networks
+
+In this section, I'll talk a little about how routers connect networks, discussing network boundaries and the need and purpose of network address translation in small networks. 
+
+To do this, I'll initially take the concept I mentioned earlier and elaborate on it:
+
+### What is a Gateway?
+
+The gateway is the exit point from the local network to other networks. Something more or less like this:
+
+Local Network
+
+|
+
+| Exit
+
+v 
+
+Gateway
+
+|
+
+v 
+
+Other Networks / Internet
+
+This makes it easier to understand that if the destination is outside the local network, the host needs to send the traffic to the gateway.
+
+---
+
+- ​​What is the default gateway?
+
+It's the IP address of the router interface that is connected to the same network as the host.
+
+In a more direct conceptual way:
+
+`Default Gateway = router used to exit the local network`
+
+- When does the computer use the gateway?
+
+According to what I've studied, it makes this comparison using:
+
+- your IP address;
+
+- subnet mask;
+
+- destination IP address.
+
+If the destination is on the same network, communication can occur locally. For example:
+
+Host A
+
+|
+
+v 
+
+Host B
+
+---
+
+If it's on another network, it would look something like this:
+
+Host A
+
+|
+
+v 
+
+Default Gateway
+
+|
+
+v 
+
+Remote Network
+
+---
+
+As already seen, for IP communication to occur, we need:
+
+`IP Address`
+`Subnet Mask`
+`Default Gateway`
+
+Thus, it's deduced from what is being studied that the IP + mask help the host identify its own network. And the gateway indicates where to send packets destined for remote networks. To explain it clearly, for easy understanding, we have:
+
+What does the IP say?
+
+`-> who am I`
+
+What does the Subnet Mask mean?
+
+`-> What is my network?`
+
+What would the Default Gateway be?
+
+`-> Where do I send external traffic?`
+
+---
+
+### Routers as boundaries between networks
+
+In this study, when we talk about a router acting as a boundary between networks, it's because it's the physical and logical "border" that separates two completely distinct network domains: the internal network (LAN) and the external network (Internet). And it is with this boundary that an address separation occurs.
+
+The term boundary embodies this dual function: the router is the point where your locally managed private network ends and where the public network under the provider's responsibility begins.
+
+---
