@@ -1928,3 +1928,17 @@ Note: Important information is that the two protocols used to determine the MAC 
 It happens that broadcast traffic is delivered to all devices within the same broadcast domain. So as it grows, excessive broadcast traffic can consume network resources and force many devices to process traffic that is not specifically intended for them.
 
 Routers help contain broadcasts by separating broadcasts into broadcast domains, while network segmentation reduces the number of devices affected by each of these.
+
+--- 
+
+### ARP Request
+
+Briefly describing it, if the necessary mapping is not yet known, the host sends an ARP request as a broadcast to the local network, figuratively asking: Who owns this IPv4 address?
+
+Therefore, since it is a broadcast, devices within the broadcast domain can receive the request.
+
+### ARP Reply
+
+The device whose IPv4 address matches the request responds with an ARP reply containing its MAC address; in this way, the requesting host can then associate the destination IPv4 address with this MAC address and use it for local Ethernet communication.
+
+---
