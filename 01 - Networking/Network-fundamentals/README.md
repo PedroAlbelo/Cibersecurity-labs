@@ -1993,3 +1993,39 @@ Therefore;
 `Fragment: #page155`
 
 Note: URLs can use protocols such as HTTP, HTTPS, FTP, SFTP, and SSH.
+
+---
+
+### Common Network Application Services
+
+They allow devices and applications to communicate on a network using standardized protocols from the TCP/IP protocol suite.
+
+Thus, common internet activities, such as web browsing, email, file transfer, and remote access, depend on these protocols for communication between clients and servers.
+
+Therefore, I will discuss some protocols mentioned previously, but in a more concise and abbreviated way, along with their functions, for reference in this study should it be necessary to review them later:
+
+DNS (Domain Name System) - Resolves domain names into IP addresses.
+
+SSH (Secure Shell) - Provides secure remote access to servers and network devices.
+
+SMTP (Simple Mail Transfer Protocol) - Sends email from clients to email servers and between email servers.
+
+POP (Post Office Protocol) - Downloads email messages from a remote email server to a client.
+
+IMAP (Internet Message Access Protocol) - Allows clients to access and manage email stored on an email server.
+
+DHCP (Dynamic Host Configuration Protocol) - Automatically assigns IP configuration to network devices.
+
+HTTP (Hypertext Transfer Protocol) - Transfers web pages and other web resources between servers and clients.
+
+FTP (File Transfer Protocol) - Transfers files and devices across a network.
+
+Basic Examples:
+
+- Open a website -> HTTP/HTTPS
+- Access `github` by name -> DNS
+- Connect remotely to a Linux server -> SSH
+- Receive IP configuration when connecting to Wi-Fi -> DHCP
+- Send an email -> SMTP
+- Access emails stored on a server -> IMAP/POP
+- Transfer files between systems -> FTP
