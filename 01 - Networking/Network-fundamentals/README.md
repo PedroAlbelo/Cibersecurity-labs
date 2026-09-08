@@ -1886,7 +1886,7 @@ The main concepts I learned about TCP and UDP are:
 
 This section will briefly explain how ARP enables communication on the internet, revisiting some concepts already familiar from this repository.
 
-## How ARP Works
+### How ARP Works
 
 ARP stands for Address Resolution Protocol and is used to discover the MAC address associated with a known IPv4 address on the local network. For example, suppose a computer wants to communicate with a second computer.
 
@@ -1920,6 +1920,8 @@ IP ​​Address -> where should the packet go?
 MAC Address -> which local network interface should receive the frame?
 
 It is important to state that both addresses work together during communication.
+
+Note: Important information is that the two protocols used to determine the MAC address of a known device's destination are ARP, used to discover the known IPv4 address, and ND (Neighbor Discovery), used to determine the MAC address of a device with a known IPv6 address.
 
 ### Broadcast must be contained
 
