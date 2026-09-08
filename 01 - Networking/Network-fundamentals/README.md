@@ -1942,3 +1942,54 @@ Therefore, since it is a broadcast, devices within the broadcast domain can rece
 The device whose IPv4 address matches the request responds with an ARP reply containing its MAC address; in this way, the requesting host can then associate the destination IPv4 address with this MAC address and use it for local Ethernet communication.
 
 ---
+
+## 20. Application Layer Services
+
+In this section, I will explain application layer services, which are network services that allow users and applications to communicate over a network or the internet. They provide functions such as web browsing, email, file sharing, and access to online services.
+
+Therefore, these services depend on standardized protocols so that clients and servers can communicate.
+
+Common examples include:
+
+- Web Services: Access to websites and web applications.
+
+- Email Services: Sending, receiving, and storing emails.
+
+- File Services: Storing and accessing files on a network.
+
+---
+
+### Client-Server Interaction
+
+The client-server model is a network architecture where two main functions interact:
+
+- Client: requests information/service
+
+- Server: receives the request, processes it, and sends a response
+
+`For example, when a user opens a web browser as a client and requests a web page from a web server`
+
+---
+
+### URI, URL, and URN
+
+URI (Uniform Resource Identifier) ​​is a sequence of characters used to identify a resource on a network.
+
+Within this, two related concepts are:
+
+- URL (Uniform Resource Locator): identifies the location of a resource and how to access it.
+
+- URN (Uniform Resource Name): Identifies a resource by name without necessarily specifying how to access it.
+
+Example:
+
+`https://www.example.com/author/book.html#page155`
+
+Therefore;
+
+`Scheme/Protocol: https`
+`Hostname: www.example.com`
+`Path: /author/book.html`
+`Fragment: #page155`
+
+Note: URLs can use protocols such as HTTP, HTTPS, FTP, SFTP, and SSH.
