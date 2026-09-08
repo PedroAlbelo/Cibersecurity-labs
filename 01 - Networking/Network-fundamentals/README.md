@@ -1881,3 +1881,48 @@ The main concepts I learned about TCP and UDP are:
 - TCP and UDP are encapsulated in IP packets.
 
 ---
+
+## 19. The ARP Process
+
+This section will briefly explain how ARP enables communication on the internet, revisiting some concepts already familiar from this repository.
+
+## How ARP Works
+
+ARP stands for Address Resolution Protocol and is used to discover the MAC address associated with a known IPv4 address on the local network. For example, suppose a computer wants to communicate with a second computer.
+
+First computer:
+
+IP: `192.168.1.10` | MAC: `AA:AA:AA:AA:AA:AA`
+
+Second computer:
+
+IP: `192.168.1.20` | MAC: `BB:BB:BB:BB:BB:BB`
+
+So the first computer already knows it needs to communicate with `192.168.1.20`, but for that, Ethernet communication on the local network requires a destination MAC address; Since the first computer doesn't yet know the MAC address of the second computer, it sends an ARP request as a broadcast:
+
+### ARP Cache
+
+Devices temporarily store learned IPv4 to MAC address mappings in an ARP cache so they don't need to make a new ARP request for each communication.
+
+In Linux, a neighbor table can be inspected using:
+
+``bash
+ip neigh
+
+### MAC ADDRESS & IP Address
+
+As already seen, an IP address provides logical addressing and is used to identify where a device is located on an IP network. Meanwhile, a MAC address identifies a network interface for communication on the local Ethernet network.
+
+Analogously:
+
+IP ​​Address -> where should the packet go?
+
+MAC Address -> which local network interface should receive the frame?
+
+It is important to state that both addresses work together during communication.
+
+### Broadcast must be contained
+
+It happens that broadcast traffic is delivered to all devices within the same broadcast domain. So as it grows, excessive broadcast traffic can consume network resources and force many devices to process traffic that is not specifically intended for them.
+
+Routers help contain broadcasts by separating broadcasts into broadcast domains, while network segmentation reduces the number of devices affected by each of these.
