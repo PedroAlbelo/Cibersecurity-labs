@@ -2029,3 +2029,31 @@ Basic Examples:
 - Send an email -> SMTP
 - Access emails stored on a server -> IMAP/POP
 - Transfer files between systems -> FTP
+
+---
+
+## 21. Network Testing Utilities
+
+### Overview
+
+`Network troubleshooting utilities` are command-line tools used to identify connectivity and configuration problems.
+
+It's interesting to note some commands since most operating systems provide built-in commands that allow administrators to inspect IP configuration, test accessibility, view connections, trace network paths, and query DNS servers, which ends up being essential for those who study or work with networks.
+
+Common utilities include:
+
+`ipconfig`
+`ping`
+`netstat`
+`tracert`
+`nslookup`
+
+These tools help determine if a problem is related to:
+
+- Local IP configuration
+- Local network connectivity
+- Remote network connectivity
+- DNS resolution
+- Application availability
+
+---
