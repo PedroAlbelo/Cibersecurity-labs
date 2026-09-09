@@ -1988,8 +1988,11 @@ Example:
 Therefore;
 
 `Scheme/Protocol: https`
+
 `Hostname: www.example.com`
+
 `Path: /author/book.html`
+
 `Fragment: #page155`
 
 Note: URLs can use protocols such as HTTP, HTTPS, FTP, SFTP, and SSH.
@@ -2023,11 +2026,17 @@ FTP (File Transfer Protocol) - Transfers files and devices across a network.
 Basic Examples:
 
 - Open a website -> HTTP/HTTPS
+
 - Access `github` by name -> DNS
+
 - Connect remotely to a Linux server -> SSH
+
 - Receive IP configuration when connecting to Wi-Fi -> DHCP
+
 - Send an email -> SMTP
+
 - Access emails stored on a server -> IMAP/POP
+
 - Transfer files between systems -> FTP
 
 ---
@@ -2043,17 +2052,25 @@ It's interesting to note some commands since most operating systems provide buil
 Common utilities include:
 
 `ipconfig`
+
 `ping`
+
 `netstat`
+
 `tracert`
+
 `nslookup`
 
 These tools help determine if a problem is related to:
 
 - Local IP configuration
+
 - Local network connectivity
+
 - Remote network connectivity
+
 - DNS resolution
+
 - Application availability
 
 ---
