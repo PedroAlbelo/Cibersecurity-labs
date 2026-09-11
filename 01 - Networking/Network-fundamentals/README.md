@@ -1927,7 +1927,7 @@ Note: Important information is that the two protocols used to determine the MAC 
 
 It happens that broadcast traffic is delivered to all devices within the same broadcast domain. So as it grows, excessive broadcast traffic can consume network resources and force many devices to process traffic that is not specifically intended for them.
 
-Routers help contain broadcasts by separating broadcasts into broadcast domains, while network segmentation reduces the number of devices affected by each of these.
+Note: Routers help contain broadcasts by separating broadcasts into broadcast domains, while network segmentation reduces the number of devices affected by each of these.
 
 --- 
 
