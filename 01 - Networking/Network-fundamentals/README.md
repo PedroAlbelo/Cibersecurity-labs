@@ -2063,14 +2063,14 @@ Common utilities include:
 
 These tools help determine if a problem is related to:
 
-- Local IP configuration
+- Local IP configuration;
 
-- Local network connectivity
+- Local network connectivity;
 
-- Remote network connectivity
+- Remote network connectivity;
 
-- DNS resolution
+- DNS resolution;
 
-- Application availability
+- Application availability;
 
 ---

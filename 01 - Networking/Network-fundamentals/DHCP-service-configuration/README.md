@@ -64,7 +64,8 @@ And also the same on the second computer with the command `ping 192.168.5.127` a
 
 ## Conclusion
 
-From a cybersecurity professional's perspective, this is important because analyzing network behavior requires understanding how devices typically obtain addresses and communicate. Incorrect DHCP configurations or unauthorized DHCP servers can cause connectivity issues or redirect network traffic.
+From a cybersecurity professional's perspective, this is important because analyzing network behavior requires understanding how devices typically obtain addresses and communicate. 
+note: Incorrect DHCP configurations or unauthorized DHCP servers can cause connectivity issues or redirect network traffic.
 
 The main takeaway from this lab is simple: to recognize abnormal network behavior, I first need to understand how the network normally behaves.
 
