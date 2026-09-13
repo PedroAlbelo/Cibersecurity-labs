@@ -1487,6 +1487,8 @@ Furthermore, it also reduces the impact of problems. If there is a misconfigurat
 
 ### Subnetting
 
+Subnetting is the process of taking a network and splitting it into smaller networks, also known as subnets. Networks are separated for safety and simpler control, and more public IPv4 addresses are made available.
+
 Speaking of subnetting, it's important to present three models:
 
 - By location:
