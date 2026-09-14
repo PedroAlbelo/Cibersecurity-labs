@@ -1520,6 +1520,43 @@ Example:
 
 ---
 
+### Subnetting Calculation
+
+It's also important when dealing with cybersecurity and networks to understand how to calculate subnetting in order to better understand the network of an IP address, identify broadcasts and host ranges, and also to configure VLANs, firewalls, VPNs, and better understand network scans like `192.168.1.0/24`.
+
+For this, I want to talk a little more about the CIDR mask or prefix, since it indicates how many bits belong to the network.
+
+192.168.10.70/24
+
+/24 -> 24 network bits = 8 host bits; why does this happen? Because every IPv4 address has 32 bits, so 32 - 24 = 8. Thus, 8 host bits determine how many addresses exist on that network.
+
+Therefore, when we want to study subnetting calculation, it's important to say that we will be looking at the most important formula in this section. This means:
+
+`Therefore, h represents bits for hosts:`
+
+`2^h (2 raised to the power of h)`
+
+This is the representation of the total number of addresses.
+
+--- Example /24:
+
+32 - 24 = 8 host bits
+
+2^8 = 256 addresses
+
+HOWEVER, two cannot be used by devices, that is, 1 address for the network address and one address is used for broadcast, thus:
+
+2^h - 2
+
+making it so: /24 = 256 - 2 = 254 usable hosts.
+
+Knowing this, there is an important subnetting table:
+
+![SUBNETTING TABLE](images/SubnettingCIDR.jpeg) 
+
+
+---
+
 Subnetting goes beyond the mathematical calculations of IP addressing; it's a strategic network design decision. Therefore, there is no single model for building subnetting. The ideal structure depends on the operational needs, security, and management requirements of each infrastructure.
 
 So, according to what I've studied, it's fair to say that the administrator has complete flexibility to define the segmentation logic that best suits their scenario.
