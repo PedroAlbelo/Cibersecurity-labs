@@ -1558,10 +1558,139 @@ Knowing this, there is an important subnetting table:
 - LEARNING NOTE:
 Therefore, to avoid memorizing the Subnetting table, any CIDR in the last octect (0.0.0.X) that has, for example, `/30`, I understand that it would then be `30 - 32`, leaving 2, and raising it to the power of 2 as in the formula above, I understand that it will result in 2^2 = 4. So, knowing that 4 is the total number of IPs I have, I will know that:
 
-255.255.255. (256-4 = 252) Therefore, I can identify that the network mask is 255.255.255.252 (remember that this is the network mask, not the network itself) and the remaining usable hosts are: `total IP - 2`. Knowing that the total was 4 (4-2 = 2), it's clear that the final number of usable hosts is 2.
+255.255.255. (256-4 = 252) Therefore, I can identify that the network mask is 255.255.255.252 (remember that this is the mask, not the network itself) and the remaining usable hosts are: `total IP - 2`. Knowing that the total was 4 (4-2 = 2), it's clear that the final number of usable hosts is 2.
 
-This multiplication table simplifies the process instead of having to do calculations with 8-bit octets of 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
+This multiplication table simplifies the process instead of having to do calculations with 8-bit octets of `128 | 64 | 32 | 16 | 8 | 4 | 2 | 1`
 
+---
+
+- Network ID
+Now, regarding the aspect of what a Network ID would be for subnetting, I would exemplify that if in a network, for example, `192.168.1.0/24`, we would have a network that goes from 192.168.1.0 to 192.168.1.255. It is understood that the first address, `192.168.1.0, is the Network ID`; it represents the network itself. Meanwhile, the last address, `192.168.1.255`, is the Broadcast address. Thus, the usable hosts are between `192.168.1.1 and 192.168.1.254`, so it would look something like this:
+
+192.168.1.0 = network
+192.168.1.1 = First Host
+192.168.1.254 = Last Host
+192.168.1.255 = Broadcast
+
+- Working with dividing smaller networks
+
+To understand how it would work in a more narrative way, imagine I have a network `192.168.1.0/24`. If I want to divide this into smaller networks, then I need to transform the `/24` into `/26`. For this, 26-24 = 2 bits, so I borrow 2 bits from the hosts to create subnets. Therefore, if two raised to the power of two equals 4, I will have the number of 4 subnets.
+
+Therefore: `one /24 will become four /26`
+
+---
+
+### Block Size in Subnetting
+
+There's a shortcut every network administrator uses to calculate subnets that greatly simplifies the process, and for that, it's important to understand what "block size" is, also called a hop or increment.
+
+In an IPv4 network, each octet ranges from 0 to 255, a total of 256 possible values. When we borrow bits from the host portion to create subnets, we divide this total space into equal blocks. The block size indicates how many IP addresses each subnet has.
+
+Knowing this, the rule for understanding how often networks appear is important:
+
+1- Find the "interesting octet," which is the one that is neither 0 nor 255, which in the case of /26 `(255.255.255.192)` would be `192`.
+
+2 - Subtract by `256`
+
+The formula is: Block size = 256 - (Interested octet)
+
+And in this case: `256 - 192 = 64`
+
+- How would this work in practice?
+
+Since the block is X in X and in this case it's 64 in 64, it means that the network addresses will start in multiples of 64, starting from zero:
+
+1 network: 192.168.1.0 (Starts at 0)
+2 network: 192.168.1.64 (0 + 64)
+3 network: 192.168.1.128 (64 + 64)
+4 network: 192.168.1.192 (128 + 64)
+
+So if I had found a /27 mask (255.255.255.224)
+it would look like this:
+
+`interesting octet: 224`
+thus doing the calculation of 256 - 224 I would have 32, so I jump 32 by 32:
+
+`192.168.1.0` (0 + 0) finding So, the first network is:
+`192.168.1.32` (0 + 32), the second network is:
+`192.168.1.64` (32 + 32), the third network is:
+`192.168.1.96` (64 + 32), the fourth network is:
+
+And understanding that 192.168.1.32 is the first subnet, according to the theory, the broadcast of the first is one number before, being 192.168.1.31. This means that the range of the first network goes from the first network (192.168.1.0) to 192.168.1.31. So, knowing that the first IP is `.0`, then the only usable ones are from `.1` to `.30`.
+
+Thus explaining what was said previously about why we have to subtract by 2 when calculating usable hosts.
+
+- Methodology Applied
+
+In a company where I was working, if I were asked what the network, broadcast, and host range of the IP address `192.168.10.77/27` is, for example.
+
+I would start by finding the /27 mask and its block, and where its IP falls:
+
+(27 - 32 = 5) 2^5 = 32 | 256 - 32 = 224 | but it's possible to know from memory, just because it's /27, that the mask is 255.255.255.224; so, knowing that the hop pattern is 32 at a time, I would have the blocks: 0; 32; 64; 96; 128; 160...
+
+resulting in: 192.168.10.0 (first network) | 192.168.10.32 (second network) | 192.168.10.64 (third network) | 192.168.10.96 (fourth network)...
+
+If our IP is `192.168.10.77/27`, then, based on the blocks, I know that following the logic of 64 ≠ `77` < 96, it can be deduced that `192.168.10.64` is its network (the third network). Since the next network is 192.168.10.96, I know that the broadcast address of the network where this IP is located is `192.168.10.95`, and following the same idea, its First Host will then be 192.168.10.65, and successively the last will be 192.168.10.94.
+
+So, in a quick subnetting logic, the result would be:
+
+IP ​= ​192.168.10.77/27
+NETWORK = 192.168.10.64
+FIRST HOST = 192.168.10.65
+LAST HOST = 192.168.10.94
+BROADCAST = 192.168.10.95
+MASK = 255.255.255.224
+HOSTS = 30 (of the 32 remaining IPs - 2)
+
+---
+- How to identify other masks?
+
+For example, sequences like: `/24 /23 /22 /21 /20 /19 /18 /17`
+Following the octet logic behind subnetting, it's easy to understand that:
+For example, /19 is = 8 + 8 + 3, therefore:
+
+`11111111.11111111.11100000.00000000`
+
+I can understand that = `255.255.224.0`
+(This is because I already know that each 1 is equivalent to the block according to its location: 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1)
+
+With this, it's important to understand that the larger the CIDR, the smaller the network becomes because we are removing bits from the hosts.
+
+`/24` -> 254 Hosts
+and so
+`/28` -> 14 Hosts
+
+Therefore, the higher the CIDR number, the lower the number of hosts, and thus the greater the possible number of subnets.
+
+---
+
+Classic exam question:
+
+`Given: 10.10.10.200/28`
+
+Find: mask: `255.255.255.240`
+network: `10.10.10.192`
+first host: `10.10.10.193`
+last host: `10.10.10.206`
+broadcast: `10.10.10.207`
+
+Solved and written as can be seen
+HOWEVER, there are cases like:
+
+10.0.37.150/20
+where the mask can be /20 = `255.255.240.0` because 240 is the interesting octet, so 37 will be the value I will work with to find the network. Therefore, 256 - 240 = 16, so my network hops will be in 16:
+
+10.0.0.0 - 1
+10.0.16.0 - 2
+10.0.32.0 - 3
+10.0.48.0 - 4
+
+So, the broadcast will be `10.0.47.255`
+The network will be `10.0.32.0`
+The first host will be: `10.0.32.1`
+And the last host will be `10.0.47.254`
+
+This is because, since the subnetting is in the 3rd octet, the `4th octet` can normally vary from 0 to 255 within each block.
 
 ---
 
