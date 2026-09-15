@@ -1555,6 +1555,14 @@ Knowing this, there is an important subnetting table:
 ![SUBNETTING TABLE](images/SubnettingCIDR.jpeg) 
 
 
+- LEARNING NOTE:
+Therefore, to avoid memorizing the Subnetting table, any CIDR in the last octect (0.0.0.X) that has, for example, `/30`, I understand that it would then be `30 - 32`, leaving 2, and raising it to the power of 2 as in the formula above, I understand that it will result in 2^2 = 4. So, knowing that 4 is the total number of IPs I have, I will know that:
+
+255.255.255. (256-4 = 252) Therefore, I can identify that the network mask is 255.255.255.252 (remember that this is the network mask, not the network itself) and the remaining usable hosts are: `total IP - 2`. Knowing that the total was 4 (4-2 = 2), it's clear that the final number of usable hosts is 2.
+
+This multiplication table simplifies the process instead of having to do calculations with 8-bit octets of 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
+
+
 ---
 
 Subnetting goes beyond the mathematical calculations of IP addressing; it's a strategic network design decision. Therefore, there is no single model for building subnetting. The ideal structure depends on the operational needs, security, and management requirements of each infrastructure.
