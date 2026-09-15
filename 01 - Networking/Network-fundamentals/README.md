@@ -1694,6 +1694,57 @@ This is because, since the subnetting is in the 3rd octet, the `4th octet` can n
 
 ---
 
+### Subnetting Calculation for N Subnets
+
+It's important for network administrators to know how to calculate subnetting and how many bits they can borrow for a given number of subnets.
+Using the formula:
+
+`2^n >= quantity`
+
+where `n` will be the number of bits borrowed from the host portion to become part of the network;
+
+For example:
+
+Divide 192.168.1.0/24 into at least 6 subnets:
+
+`2^n > 6` 
+
+2³ = 8 networks (enough because it exceeds 6) so `n` would be `3 bits`
+
+going from /24 -> /27
+
+therefore 27 - 32 = 5 | 2^5 = 32 subtracting 2. 30 hosts remain available
+
+`thus I can determine 8 subnets and 30 hosts per subnet`
+
+---
+### Subnetting Calculation for N hosts
+
+if a problem asks for `20 hosts per network`
+
+I will do `2^h - 2 >= 20` (since you cannot assign a host to a Network ID and a broadcast, it's important to always note this)
+
+2^4 - 2 = 14 so I know that 4 is not enough
+
+however
+
+2^5 - 2 = 30, so with this value `n`, I will need 5 host bits.
+
+Therefore, 32 - 5 = 27
+
+`The correct answer is thus /27`
+
+### Subnetting Fundamentals to Remember.
+
+Based on this entire section that has been seen, it is important to remember the following points, which are targeted in network skills tests and exams, so as not to forget them:
+
+- IPv4 = 32 bits
+- Hosts = 2^ (host bits) - 2
+- Subnets = 2^ (borrowed bits)
+- Block = 256 - interesting octet mask value
+
+---
+
 Subnetting goes beyond the mathematical calculations of IP addressing; it's a strategic network design decision. Therefore, there is no single model for building subnetting. The ideal structure depends on the operational needs, security, and management requirements of each infrastructure.
 
 So, according to what I've studied, it's fair to say that the administrator has complete flexibility to define the segmentation logic that best suits their scenario.
