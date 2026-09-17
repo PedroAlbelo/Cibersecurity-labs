@@ -2272,7 +2272,7 @@ Basic Examples:
 
 ### Overview
 
-`Network troubleshooting utilities` are command-line tools used to identify connectivity and configuration problems.
+`Network troubleshooting utilities` are command-line tools used to identify connectivity and configuration problems; And I won't go into detail in this section since I'll show more about it in this repository in specific labs just for them: `Lab-Ipconfig`
 
 It's interesting to note some commands since most operating systems provide built-in commands that allow administrators to inspect IP configuration, test accessibility, view connections, trace network paths, and query DNS servers, which ends up being essential for those who study or work with networks.
 
@@ -2299,5 +2299,122 @@ These tools help determine if a problem is related to:
 - DNS resolution;
 
 - Application availability;
+
+---
+
+## 22. Network Design
+
+It is understood that the design of a network aims to generate an infrastructure capable of supporting users, devices, and services in an efficient, secure, and scalable way. To achieve this, a reliable network architecture must primarily meet four requirements:
+
+- Fault Tolerance
+- Scalability
+- Quality of Service (QoS)
+- Security
+
+---
+
+### Fault Tolerance
+
+A fault tolerance network is one that is designed to continue functioning even when some equipment or link fails.
+
+This is usually achieved through redundancy, that is, by providing multiple paths between origin and destination.
+
+- Example
+
+If a link or router fails:
+
+PC -> Router A -> Internet
+
+*failed*
+
+Then:
+
+PC -> Router B -> Internet
+
+*working*
+
+Therefore, traffic can automatically use another available path.
+
+This networking concept is based on packet switching, which also helps in this process, because, as you can see, the data is divided into packets that can travel different paths to their destination.
+
+---
+
+Therefore, it is also important to consider Fault Tolerance from this perspective, such as:
+
+- Redundancy, which is the existence of alternative resources or paths in the network so that it takes over communication if the main one fails.
+
+- Failover, which is the process of automatically switching to a backup device, link, or system when a failure occurs.
+
+(The difference between these two is that redundancy is having an alternative, while failover is using that alternative when the primary one fails.)
+
+- Multiple paths: using more than one possible route between origin and destination, thus avoiding dependence on a single path.
+
+- Packet Switching: a method where data is divided into small packets that can travel different paths to reach their destination.
+
+- High availability: the ability to keep services and systems accessible for as long as possible, thus reducing periods of unavailability.
+
+- ---
+
+### Scalability
+
+Scalability is the ability of a network to grow without causing a drop in performance, since a well-designed network should allow adding new users, computers, servers, routers, and others without having to rebuild the entire infrastructure.
+
+This is only possible due to the use of:
+
+- Network standards, which are rules and specifications that allow different devices to work together.
+
+- Standardized protocols, sets of communication rules, such as TCP/IP, for data exchange between devices.
+
+- Modular architecture, organizing the network into independent parts or modules, facilitating expansion.
+
+- Proper planning, advance definition of addressing, capacity, and equipment.
+
+![Image scalability](images/Scalability.jpeg)
+
+---
+### Quality of Service (QoS)
+
+QoS allows you to control and prioritize certain types of traffic within the network.
+
+This is of great importance when congestion exists.
+
+For example, some applications are more sensitive than others, so QoS will prioritize the transfer of certain packets that are more time-sensitive, as shown in the following image:
+
+![Image QoS](images/QoS.jpeg)
+
+
+Note: Congestion occurs when traffic demand exceeds available bandwidth. When this happens, routers and switches may temporarily store packets in buffers/queues.
+
+### Security
+
+Network security involves protecting both the infrastructure and the data transmitted over it, and in this regard, it is necessary to analyze two major points of protection in more depth.
+
+- Network Infrastructure Security;
+
+This would be the protection of the equipment responsible for the network, such as routers, switches, access points, firewalls, and servers. This requires certain measures, such as: authentication, access control, strong passwords, physical protection of equipment, firmware/software updates, and restriction of administrative access.
+
+- CIA Triad:
+
+This is one of the main concepts in information security. The acronym CIA stands for Confidentiality, Integrity, and Availability. In short, it means:
+
+- Confidentiality:
+
+When only authorized people or systems can access certain information.
+
+- Integrity:
+
+Ensures that data is not improperly altered during storage or transmission.
+
+- Availability:
+
+Makes systems, networks, and information available when authorized users need them.
+
+It's important to discuss the hierarchical network design model, which is divided into 3 layers:
+
+- Access Layer: `which connects end devices to the network and grants users access to the network.`
+
+- Distribution Layer: `which aggregates cabling cabinet connections and implements routing, security, and quality policies as seen above.`
+
+- Core Layer: `which acts as a high-speed backbone of the internetwork, designed to switch packets as quickly as possible.`
 
 ---
