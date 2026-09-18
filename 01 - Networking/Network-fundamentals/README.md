@@ -2425,7 +2425,6 @@ In this section, I will discuss two related but not identical concepts: cloud co
 
 Virtualization is what makes cloud computing possible.
 
----
 ### What is Cloud Computing?
 
 Cloud computing is the use of computing resources over a network (usually the internet).
@@ -2436,6 +2435,7 @@ It's like using a physical server that has processing, storage, etc., within a c
 A clearer example would be when a user uses Google Drive, AWS, Azure, or another service, because that's exactly when an external infrastructure is running.
 
 ### Types of Cloud
+
 Four models are important to consider when discussing clouds:
 
 - Public Cloud
@@ -2443,9 +2443,8 @@ Four models are important to consider when discussing clouds:
 - Hybrid Cloud
 - Community Cloud
 
----
 
-- ​​Public Cloud
+### ​​Public Cloud
 
 This is the concept of an infrastructure made available to various clients via the internet. Common examples include:
 
@@ -2455,9 +2454,8 @@ This is the concept of an infrastructure made available to various clients via t
 
 What are the advantages of a Public Cloud? They have lower initial investment, easy expansion, rapid deployment, and no need to purchase servers. The only disadvantage is dependence on third parties.
 
----
 
-- ​​Private Cloud
+### ​​Private Cloud
 
 This is when a cloud infrastructure is exclusively dedicated to one organization; that is, no other company uses that infrastructure. The following example is shown in the image:
 
@@ -2465,19 +2463,18 @@ This is when a cloud infrastructure is exclusively dedicated to one organization
 
 The main advantages are greater control over security, data, policies, and infrastructure. However, they tend to be more expensive to build and maintain.
 
----
 
-- ​​Hybrid Cloud
+### ​​Hybrid Cloud
 
 A Hybrid Cloud mixes the two cloud models. One part of the infrastructure remains private, and the other part uses public services. This can happen when a company uses a Private Cloud to manage financial data but uses a Public Cloud for websites. These environments remain separate but can communicate within an integrated architecture, allowing the choice of where each service should operate.
 
-- Community Cloud
+### Community Cloud
 
 Generally built to meet the needs of a specific group of organizations with similar requirements, this makes sense because certain sectors have their own specific requirements.
 
 ---
 
-### What is Virtualization?
+## What is Virtualization?
 
 It means creating a virtual version of some computing resource, whether it's a computer, server, storage, network, or operating system.
 
