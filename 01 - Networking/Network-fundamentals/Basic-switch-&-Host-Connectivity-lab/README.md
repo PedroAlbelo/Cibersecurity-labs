@@ -6,6 +6,8 @@ This lab demonstrates the basic configuration of Layer 2 switch management and e
 
 The main objective of this lab was to configure two switches and two PCs on the same IPv4 network, assign management IP addresses to the switches via an SVI, and verify end-to-end connectivity using ICMP ping tests.
 
+`It is also possible to look in the .txt folder the commands found in the images, to assist the process for anyone reading this repository.`
+
 Objectives:
 
 - Configure hostnames on Cisco switches
