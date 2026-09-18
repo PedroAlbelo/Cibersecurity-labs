@@ -2418,3 +2418,81 @@ It's important to discuss the hierarchical network design model, which is divide
 - Core Layer: `which acts as a high-speed backbone of the internetwork, designed to switch packets as quickly as possible.`
 
 ---
+
+## 23. Cloud and Virtualization
+
+In this section, I will discuss two related but not identical concepts: cloud computing and virtualization.
+
+Virtualization is what makes cloud computing possible.
+
+---
+### What is Cloud Computing?
+
+Cloud computing is the use of computing resources over a network (usually the internet).
+It's like using a physical server that has processing, storage, etc., within a company, but provided remotely, as shown in the image below:
+
+![cloudcomputing](images/cloudcomputing.jpeg)
+
+A clearer example would be when a user uses Google Drive, AWS, Azure, or another service, because that's exactly when an external infrastructure is running.
+
+### Types of Cloud
+Four models are important to consider when discussing clouds:
+
+- Public Cloud
+- Private Cloud
+- Hybrid Cloud
+- Community Cloud
+
+---
+
+- ​​Public Cloud
+
+This is the concept of an infrastructure made available to various clients via the internet. Common examples include:
+
+- AWS
+- Microsoft Azure
+- Google Cloud
+
+What are the advantages of a Public Cloud? They have lower initial investment, easy expansion, rapid deployment, and no need to purchase servers. The only disadvantage is dependence on third parties.
+
+---
+
+- ​​Private Cloud
+
+This is when a cloud infrastructure is exclusively dedicated to one organization; that is, no other company uses that infrastructure. The following example is shown in the image:
+
+![PrivateComputing](images/PrivateCloud.jpeg)
+
+The main advantages are greater control over security, data, policies, and infrastructure. However, they tend to be more expensive to build and maintain.
+
+---
+
+- ​​Hybrid Cloud
+
+A Hybrid Cloud mixes the two cloud models. One part of the infrastructure remains private, and the other part uses public services. This can happen when a company uses a Private Cloud to manage financial data but uses a Public Cloud for websites. These environments remain separate but can communicate within an integrated architecture, allowing the choice of where each service should operate.
+
+- Community Cloud
+
+Generally built to meet the needs of a specific group of organizations with similar requirements, this makes sense because certain sectors have their own specific requirements.
+
+---
+
+### What is Virtualization?
+
+It means creating a virtual version of some computing resource, whether it's a computer, server, storage, network, or operating system.
+
+A simple real-world example is running Linux on a Windows computer. A single physical server can run several independent systems.
+
+### VM - Virtual Machine
+
+As mentioned, one of the most used virtualized computing resources is the software-created computer, which is precisely a virtual machine.
+
+Its advantages are based on the fact that instead of 10 servers for 10 services, you can simply run several VMs on a few powerful servers, resulting in less hardware, less maintenance, and lower costs. Thus, fewer physical servers mean less electricity consumption, cooling, UPS power, and electrical infrastructure. This also ends up being efficient for creating a test environment for those who want to learn more about cybersecurity.
+
+- Usefulness of a VM
+Disaster recovery is the term used for recovery after serious failures where, for example, if a server, disk, or system becomes corrupted or has some problem, virtualization using a Virtual Machine can be copied, migrated, etc.
+
+- Legacy Support
+A VM can simply become compatible, so you can virtualize that environment with the old operating system and the specific old application. This allows you to keep old applications running while the company migrates.
+
+---
