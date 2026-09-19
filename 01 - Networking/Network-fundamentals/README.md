@@ -2432,7 +2432,7 @@ It's like using a physical server that has processing, storage, etc., within a c
 
 ![cloudcomputing](images/cloudcomputing.jpeg)
 
-A clearer example would be when a user uses Google Drive, AWS, Azure, or another service, because that's exactly when an external infrastructure is running.
+`A clearer example would be when a user uses Google Drive, AWS, Azure, or another service, because that's exactly when an external infrastructure is running.`
 
 ### Types of Cloud
 
@@ -2452,7 +2452,9 @@ This is the concept of an infrastructure made available to various clients via t
 - Microsoft Azure
 - Google Cloud
 
-What are the advantages of a Public Cloud? They have lower initial investment, easy expansion, rapid deployment, and no need to purchase servers. The only disadvantage is dependence on third parties.
+What are the advantages of a Public Cloud? They have lower initial investment, easy expansion, rapid deployment, and no need to purchase servers.
+
+The only disadvantage is dependence on third parties.
 
 
 ### ​​Private Cloud
@@ -2466,7 +2468,9 @@ The main advantages are greater control over security, data, policies, and infra
 
 ### ​​Hybrid Cloud
 
-A Hybrid Cloud mixes the two cloud models. One part of the infrastructure remains private, and the other part uses public services. This can happen when a company uses a Private Cloud to manage financial data but uses a Public Cloud for websites. These environments remain separate but can communicate within an integrated architecture, allowing the choice of where each service should operate.
+A Hybrid Cloud mixes the two cloud models. One part of the infrastructure remains private, and the other part uses public services. 
+
+This can happen when a company uses a Private Cloud to manage financial data but uses a Public Cloud for websites. These environments remain separate but can communicate within an integrated architecture, allowing the choice of where each service should operate.
 
 ### Community Cloud
 
@@ -2474,7 +2478,7 @@ Generally built to meet the needs of a specific group of organizations with simi
 
 ---
 
-## What is Virtualization?
+### What is Virtualization?
 
 It means creating a virtual version of some computing resource, whether it's a computer, server, storage, network, or operating system.
 
@@ -2490,6 +2494,7 @@ Its advantages are based on the fact that instead of 10 servers for 10 services,
 Disaster recovery is the term used for recovery after serious failures where, for example, if a server, disk, or system becomes corrupted or has some problem, virtualization using a Virtual Machine can be copied, migrated, etc.
 
 - Legacy Support
-A VM can simply become compatible, so you can virtualize that environment with the old operating system and the specific old application. This allows you to keep old applications running while the company migrates.
+A VM can simply become compatible, so you can virtualize that environment with the old operating system and the specific old application.
+This allows you to keep old applications running while the company migrates.
 
 ---
