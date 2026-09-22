@@ -34,7 +34,7 @@ Fourth computer:
 ![5](images/5.jpeg)
 
 
-Now that I have identified that computers 2, 3, and 4 were misconfigured, I will move to the next step. This was noticeable because only the first one had DHCP Server information and was the only one opening the link: (www.cisco.pka).
+Note: Now that I have identified that computers 2, 3, and 4 were misconfigured, I will move to the next step. This was noticeable because only the first one had DHCP Server information and was the only one opening the link: (www.cisco.pka).
 
 ### 2 - Correct any Misconfigurations
 

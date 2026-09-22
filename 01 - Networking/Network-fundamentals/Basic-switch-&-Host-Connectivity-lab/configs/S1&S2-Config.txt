@@ -1,0 +1,13 @@
+enable
+configure terminal
+
+hostname S1 (Or S2)
+
+interface vlan 1 
+ip address (address) (mask)
+no shutdown
+
+end
+copy running-config startup-config 
+
+show ip interface brief
