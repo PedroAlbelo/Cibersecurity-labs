@@ -27,3 +27,8 @@ Essentially, this is a way to recognize the machine if the user wants to access 
 `id` - shows the detailed identity of the current user, including their User ID and which groups they belong to.
 `uptime` - indicates how long the machine has been continuously powered on.
 `date` - displays the system date and time.
+
+Finally, it's a basic feature that's most commonly used when the user doesn't yet have much knowledge of the computer they're using or tends to access many machines simultaneously.
+
+---
+
