@@ -107,3 +107,31 @@ And to return to the previously accessed directory:
 `cd -`
 
 Understanding directory navigation is essential when inspecting configuration files, applications, or even system resources.
+
+---
+
+### Absolute and Relative Paths
+
+Linux supports two types of paths: absolute and relative.
+
+- An absolute path starts at the root of the file system (/).
+
+Example:
+
+/var/log/syslog
+
+meanwhile, a relative path starts at the user's current working directory. How?
+
+For example, if the directory is:
+
+`/home/user`
+
+the path:
+
+`Documents/report.txt`
+
+would be represented by:
+
+`/home/user/Documents/report.txt`
+
+Understanding this difference between absolute and relative paths helps to avoid errors when working with files, scripts, and administrative commands.
