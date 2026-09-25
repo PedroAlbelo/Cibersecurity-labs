@@ -135,3 +135,48 @@ would be represented by:
 `/home/user/Documents/report.txt`
 
 Understanding this difference between absolute and relative paths helps to avoid errors when working with files, scripts, and administrative commands.
+
+---
+
+### find - Search the Filesystem
+
+The `find` command searches directories/folders/subdirectories for specific conditions defined by the user. How?
+
+Example:
+
+`find/etc -name ".conf"`
+
+This command creates files with the `.conf` extension in `/etc`.
+
+You can also search only for `common files` like this:
+
+`find /var/log -type f`
+
+or search only for directories:
+
+`find /home -type d`
+
+search starting from the current directory:
+
+
+`find . -name ".txt"`
+
+This last command is important because it can be used to locate configuration files/suspicious files or files with specific attributes.
+
+---
+
+### locate - Quickly locate files
+
+The locate command offers another method for finding files. Unlike `find`, which searches directly in the file system, `locate` searches a pre-generated database containing indexed filenames.
+
+Example:
+
+`locate ssh_config`
+
+Therefore, `locate` can be effectively faster unless you are looking for a recently created file, as there is a chance it may not yet be in the database.
+
+Note: Depending on the Linux distribution being used, the database can be updated with:
+
+`sudo updatedb`
+
+---
