@@ -79,3 +79,31 @@ And it's also possible to combine the options:
 This is useful during system administration and security investigations, as it allows you to simultaneously display hidden files, ownership, and file size.
 
 ---
+
+### cd - Change Directory
+
+In short, this command is used to navigate between directories. How?
+
+Example:
+
+
+`cd /etc`
+
+This command will take the shell to the `etc` directory.
+
+To return to the initial directory, the user will use:
+
+
+`cd ~`
+
+And in the same logic, to go to the parent directory:
+
+
+`cd ..`
+
+And to return to the previously accessed directory:
+
+
+`cd -`
+
+Understanding directory navigation is essential when inspecting configuration files, applications, or even system resources.
