@@ -180,3 +180,90 @@ Note: Depending on the Linux distribution being used, the database can be update
 `sudo updatedb`
 
 ---
+
+### Important Linux Directories
+
+Understanding the Linux file system hierarchy is essential, as different types of information are stored in specific directories.
+
+`/etc`
+
+The /etc directory contains system-wide configuration files.
+
+Examples include:
+
+`/etc/passwd`
+`/etc/group`
+`/etc/hosts`
+`/etc/hostname`
+`/etc/resolv.conf`
+`/etc/ssh/`
+
+The /etc directory ends up being extremely useful due to its content containing user configurations, networks, authentication, and more.
+
+Example related to this:
+
+`ls -lah /etc`
+
+---
+
+### /var
+
+The /var directory stores data that is changed while the system is running. So, applications, system services, and databases can store operational information within /var.
+
+It generally contains:
+
+`/var/log`
+`/var/cache`
+`/var/lib`
+`/var/tmp`
+
+Also, if you need to look at a larger scale:
+
+`ls -lah /var`
+
+---
+
+### /var/log
+
+It is one of the most important directories from a cybersecurity perspective, as it traditionally contains system and application logs that are fundamental for anomaly or bug analysis.
+
+Example:
+
+`ls -lah /var/log`
+
+Depending on the Linux distribution, this directory may contain information related to:
+
+- authentication attempts;
+
+- system services, application errors;
+
+- package management;
+
+- kernel activity;
+
+- among others
+
+---
+
+### Practical Example of Navigation
+
+A simple workflow for exploring a Linux system could be:
+
+`pwd`
+`ls -lah`
+`cd /etc`
+`pwd`
+`ls -lah`
+`cd /var/log`
+`ls -lah`
+`cd ~`
+
+To search for SSH-related configuration files:
+
+`find /etc -iname "*ssh*"`
+
+To search for log files:
+
+`find /var/log -type f -name "*.log"`
+
+These commands demonstrate how file navigation and discovery can be combined during system administration and troubleshooting.
