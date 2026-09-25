@@ -32,3 +32,50 @@ Finally, it's a basic feature that's most commonly used when the user doesn't ye
 
 ---
 
+## Linux Navigation System
+
+Navigating the Linux file system is fundamental for any system administration, leading to an understanding of the best solutions for network operation or cybersecurity problems, which are generally managed through command lines.
+
+So, initially it's interesting to mention that Linux uses a hierarchical file system structure that starts at the `root directory`:
+
+`/`
+
+Note: all user files and data are organized under this `root directory`:
+
+The second interesting command to learn is:
+
+### PWD - Print working directory
+
+Although a simple command, it's useful because it displays the absolute path of the directory where the user is currently located.
+
+`pwd`
+
+This is useful for navigating the system or executing commands that use relative paths.
+
+### ls - List directory contents
+
+In a way, the `ls` command is used to display files and directories:
+
+`ls`
+
+and it also has some options used such as:
+
+`ls -l`
+
+to display information provided about the files, including permissions, ownership, size, and modification data.
+
+`ls -a`
+
+to display all files, including hidden files whose names originate with `..`.
+
+`ls -lh`
+
+is used to display the size of files in a human-readable format.
+
+And it's also possible to combine the options:
+
+`ls -lah`
+
+This is useful during system administration and security investigations, as it allows you to simultaneously display hidden files, ownership, and file size.
+
+---
