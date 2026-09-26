@@ -44,7 +44,7 @@ Note: all user files and data are organized under this `root directory`:
 
 The second interesting command to learn is:
 
-### PWD - Print working directory
+### pwd - Print working directory
 
 Although a simple command, it's useful because it displays the absolute path of the directory where the user is currently located.
 
@@ -198,7 +198,7 @@ Examples include:
 `/etc/resolv.conf`
 `/etc/ssh/`
 
-The /etc directory ends up being extremely useful due to its content containing user configurations, networks, authentication, and more.
+Note: The /etc directory ends up being extremely useful due to its content containing user configurations, networks, authentication, and more.
 
 Example related to this:
 
@@ -266,4 +266,6 @@ To search for log files:
 
 `find /var/log -type f -name "*.log"`
 
-These commands demonstrate how file navigation and discovery can be combined during system administration and troubleshooting.
+Note: These commands demonstrate how file navigation and discovery can be combined during system administration and troubleshooting.
+
+---
