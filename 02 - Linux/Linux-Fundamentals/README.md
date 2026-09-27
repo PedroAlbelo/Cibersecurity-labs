@@ -292,7 +292,7 @@ Note: It is also possible to create several directories at once, for example:
 
 and then inside "laboratory" you will be able to see several folders like the ones mentioned above.
 
-Interesting detail:
+- Interesting detail:
 
 If you run `mkdir cybersecurity/linux/fundamentals`, an error will occur if any of these folders do not exist.
 
@@ -301,5 +301,63 @@ At this point, it's important to add:
 `mkdir -p cybersecurity/linux/fundamentals`
 
 because the -p option will also create the necessary parent directories.
+
+---
+
+### touch - creating empty files and changing timestamps
+
+The most commonly used command to create empty files is `touch`.
+
+So, to better explain, an example would be:
+
+`touch notes.txt`
+
+and then, using `ls`, it's possible to see:
+
+notes.txt
+
+Following the same logic as shown in mkdir, it's also possible to create a sequence of files like this:
+
+`touch notes.txt report.txt evidence.txt`
+
+Thus creating a sequence of files as well.
+
+Note: To quickly automate the creation of multiple files, you can write:
+
+`touch file{1..5}.txt`
+
+This will create multiple files: file.1.txt, file.2.txt, and so on until the fifth file. This ends up being a facilitator for enthusiasts or workers in the field. The only catch is that it doesn't create content within the file.
+
+Timestamps in relation to touch
+
+In simpler terms, it works as a quick analysis that you can request from any document via a command. Within this, you can analyze:
+
+`mtime` - Modification Time: indicates when the file content was modified.
+
+`atime` - Access Time: indicates when the file was accessed.
+
+and `ctime` - Change Time: indicates when the file metadata was altered.
+
+This ends up being very interesting for forensic areas, incidents, malware analysis, and other functions in the cybersecurity field.
+
+To execute:
+
+`stat report.txt`
+
+This way, all the information I mentioned above can be retrieved.
+
+Access, modify, change, Birth
+
+- Using touch, it's possible to update this information.
+
+`touch -a file.txt`
+
+(thus changing the access time)
+
+It is also possible to modify:
+
+`touch -d "2026-01-01 00:01" evidence.txt`
+
+Note: This is a way to change the time metadata. Therefore, during investigations, it is important not to automatically assume the timestamps of any file.
 
 ---
