@@ -269,3 +269,37 @@ To search for log files:
 Note: These commands demonstrate how file navigation and discovery can be combined during system administration and troubleshooting.
 
 ---
+
+## File Manipulation
+
+File manipulation within Linux is necessary for organizing and creating directories, thus making things easier for users already familiar with terminal tools.
+
+### mkdir - Creating Directories
+
+mkdir essentially means "make directory," its function is to create a new folder within Linux itself:
+
+usually being:
+
+`mkdir laboratory`
+
+and this can be verified with `ls`, thus seeing "laboratory" written as such.
+
+To enter it, as seen before, simply type `cd laboratory` and to confirm, type `pwd` -> (example: /home/user/laboratory)
+
+Note: It is also possible to create several directories at once, for example:
+
+`mkdir logs scripts evidence reports`
+
+and then inside "laboratory" you will be able to see several folders like the ones mentioned above.
+
+Interesting detail:
+
+If you run `mkdir cybersecurity/linux/fundamentals`, an error will occur if any of these folders do not exist.
+
+At this point, it's important to add:
+
+`mkdir -p cybersecurity/linux/fundamentals`
+
+because the -p option will also create the necessary parent directories.
+
+---
