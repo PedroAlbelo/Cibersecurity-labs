@@ -361,3 +361,49 @@ It is also possible to modify:
 Note: This is a way to change the time metadata. Therefore, during investigations, it is important not to automatically assume the timestamps of any file.
 
 ---
+
+### cat - View and combine file contents
+
+`cat` comes from `concatenate`, its main function is to read and concatenate files, although many people primarily use it to display the contents of files in the terminal.
+
+So for example
+
+`cat notes.txt`
+
+will appear in Output -> `Laboratory`
+
+---
+
+### cp - copy files
+
+cp comes from:
+
+`copy`
+
+it is used to copy files and directories, serving as a backup.
+
+`cp report.txt`
+
+or copying directory:
+
+`cp documents backups/`
+
+---
+
+### mv - move
+
+mv comes from `move`, it is mainly used to move files/directories and rename files/directories.
+
+Example:
+
+`mv report.txt documents/`
+
+And then, in this way, the file `report.txt` becomes `documents/`
+
+This can also be used to rename a file;
+
+`mv report.txt final-report.txt`
+
+and thus becoming the final file `final-report.txt`
+
+---
