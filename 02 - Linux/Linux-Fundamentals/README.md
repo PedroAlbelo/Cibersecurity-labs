@@ -270,7 +270,7 @@ Note: These commands demonstrate how file navigation and discovery can be combin
 
 ---
 
-## File Manipulation
+## File Manipulation & File Analyzation
 
 File manipulation within Linux is necessary for organizing and creating directories, thus making things easier for users already familiar with terminal tools.
 
