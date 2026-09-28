@@ -407,3 +407,63 @@ This can also be used to rename a file;
 and thus becoming the final file `final-report.txt`
 
 ---
+
+### rm - remove
+
+As the name suggests, this command removes files and directories. It's important to use it carefully because when using this command, the file is deleted without going through a recycle bin.
+
+For example:
+
+`rm file.txt`
+
+This will delete the written file.
+
+It's also possible to make it interactive and authenticate whether or not to delete the file by adding:
+
+`rm -i file.txt`
+
+This will cause the terminal to ask if it can remove what was written.
+
+---
+
+### less - Reading large files
+
+Generally used to open files in the terminal without dumping the contents all at once.
+
+For example:
+
+`less Downloads/`
+
+This allows you to view logs, configuration files, reports, very large files, and you can exit less when you enter it by pressing the `q` key.
+
+---
+### head - First lines
+Used to show the beginning of a file.
+
+Example:
+
+`head file.txt`
+
+This will show the first 10 lines of the file, which is useful for discovering how the file starts, its format, and if the content appears correctly.
+
+### tail - last lines
+
+Does the opposite of `head`, as it shows the last 10 lines of a file, thus being useful for a similar purpose to head.
+
+`tail file.txt`
+
+---
+
+### grep - pattern search
+
+This command is important when it comes to Linux administration or searching and filtering text within files and command outputs.
+
+The most basic use would be:
+
+`grep "ERROR" system.log`
+
+This will search all lines in `system.log` that contain the keyword: ERROR.
+
+It essentially works like a search tool for information that the user wants to filter.
+
+---
