@@ -444,7 +444,7 @@ Example:
 
 `head file.txt`
 
-This will show the first 10 lines of the file, which is useful for discovering how the file starts, its format, and if the content appears correctly.
+note: This will show the first 10 lines of the file, which is useful for discovering how the file starts, its format, and if the content appears correctly.
 
 ### tail - last lines
 
