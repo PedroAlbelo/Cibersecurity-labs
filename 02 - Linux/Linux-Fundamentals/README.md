@@ -418,7 +418,7 @@ For example:
 
 This will delete the written file.
 
-It's also possible to make it interactive and authenticate whether or not to delete the file by adding:
+Note: It's also possible to make it interactive and authenticate whether or not to delete the file by adding:
 
 `rm -i file.txt`
 
